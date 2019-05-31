@@ -1,0 +1,13 @@
+<!--pages/component.wxml-->
+<view class="foot">   
+    <view class="footer" hover-class="none" hover-stop-propagation="false">
+        <image class="footer_image" src="../../pages/image/home.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{!clickFlag}}"/>
+        <image class="footer_image" src="../../pages/image/home_select.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{clickFlag}}"/>
+        <view>首页</view>
+    </view>
+    <view class="footer" hover-class="none" hover-stop-propagation="false">
+        <image class="footer_image" src="../../pages/image/home.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+        <view>我的</view>
+    </view>
+</view>
+  

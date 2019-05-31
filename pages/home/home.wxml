@@ -1,0 +1,11 @@
+<!--pages/home/home.wxml-->
+<view>
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fffacd" indicator-active-color="#ffee58">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    </view>
+  </swiper-item>
+</swiper>
+<foot id="foot" curryPage="{{curryPage}}"></foot>
+</view>

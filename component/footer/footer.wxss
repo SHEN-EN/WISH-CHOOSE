@@ -1,0 +1,20 @@
+/* pages/component.wxss */
+
+.footer{
+    width:50%;
+    float:left;
+    text-align:center;
+    height:110rpx;
+    background:#ffee58;
+    line-height:36rpx;
+}
+.foot{
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+.foot .footer .footer_image{
+    width:50rpx;
+    height:50rpx;
+    margin-top:10rpx;
+}

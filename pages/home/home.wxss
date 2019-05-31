@@ -1,0 +1,21 @@
+/* pages/home/home.wxss */
+page{
+  background: #fff;
+}
+.card-swiper swiper-item .swiper-item{
+  height:80%;
+}
+.card-swiper swiper-item{
+  width:640rpx !important;
+  left:56rpx;
+  top:58rpx;
+}
+.card-swiper {
+  height:410rpx !important;
+  margin-top:-65rpx;
+}
+.tower-swiper .tower-item {
+	transform: scale(calc(0.5 + var(--index) / 10));
+	margin-left: calc(var(--left) * 100rpx - 150rpx);
+	z-index: var(--index);
+}

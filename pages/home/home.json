@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "foot":"../../component/footer/footer"
+  }
+}
