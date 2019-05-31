@@ -18,7 +18,17 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    changePage:function(){
+      if (this.data.clickFlag) {
+        this.setData({
+          clickFlag:false
+        })
+      }else{
+        this.setData({
+          clickFlag:true
+        })
+      }
+    }
   },
 
 })
