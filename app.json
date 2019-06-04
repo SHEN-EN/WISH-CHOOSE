@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/author/author"
+    "pages/author/author",
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",

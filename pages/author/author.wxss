@@ -32,7 +32,7 @@ page{
   width: 85%;
   border: #ffee58;
   position: absolute;
-  top:830rpx;
+  top:860rpx;
   left: 0;
   right: 0;
   outline: none;

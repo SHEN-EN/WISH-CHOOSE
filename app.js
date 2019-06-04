@@ -1,7 +1,6 @@
 //app.js
 App({
   onLaunch: function() {
-    // 展示本地存储能力
     wx.checkSession({
       success: function () {
         //session_key 未过期，并且在本生命周期一直有效
@@ -44,7 +43,7 @@ App({
               }
             })
           }else{//未授权
-            wx.redirectTo({
+            wx.redirectTo({//重定向授权页
               url: '../../pages/author/author',
             })
           }

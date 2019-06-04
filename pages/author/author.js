@@ -5,7 +5,7 @@ Page({
   data: {
     userInfo: {},
   },
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -22,10 +22,10 @@ Page({
       })
     }
   },
-  getUserInfo: function (e) {
+  getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    if (e.detail.errMsg == "getUserInfo:ok") {//同意授权
+    if (e.detail.errMsg == "getUserInfo:ok") { //同意授权
       wx.getUserInfo({
         success: res => {
           // 可以将 res 发送给后台解码出 unionId

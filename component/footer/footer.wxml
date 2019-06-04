@@ -1,14 +1,13 @@
 <!--pages/component.wxml-->
 <view class="foot">   
-    <view class="footer" hover-class="none" hover-stop-propagation="false" bindtap="changePage">
-        <image class="footer_image" src="../../pages/image/home.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{!clickFlag}}"/>
-        <image class="footer_image" src="../../pages/image/home_select.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{clickFlag}}"/>
+    <view class="footer" hover-class="none" hover-stop-propagation="false" bindtap="home">
+        <image class="footer_image" src="../../pages/image/home.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{!home}}"/>
+        <image class="footer_image" src="../../pages/image/home_select.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{home}}"/>
         <view>首页</view>
     </view>
-    <view class="footer" hover-class="none" hover-stop-propagation="false" bindtap="changePage">
-        <image class="footer_image" src="../../pages/image/my.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{clickFlag}}"/>
-        <image class="footer_image" src="../../pages/image/my_select.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{!clickFlag}}"/>
+    <view class="footer" hover-class="none" hover-stop-propagation="false" bindtap="my">
+        <image class="footer_image" src="../../pages/image/my.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{!my}}"/>
+        <image class="footer_image" src="../../pages/image/my_select.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" wx:if="{{my}}"/>
         <view>我的</view>
     </view>
 </view>
-  
