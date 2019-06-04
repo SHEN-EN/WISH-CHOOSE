@@ -1,0 +1,41 @@
+/* pages/author.wxss */
+page{
+  background: #fff;
+}
+.aut{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.aut_img{
+  width:350rpx;
+  height:350rpx;
+  position: absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  top: 230rpx;
+}
+.aut_text{
+  position: absolute;
+  color: #656565;
+  width:50%;
+  left:0;
+  right:0;
+  margin:auto;
+  top:600rpx;
+  line-height:50rpx;
+}
+.aut_button{
+  background:#ffee58;
+  border-radius: 50rpx;
+  width: 85%;
+  border: #ffee58;
+  position: absolute;
+  top:830rpx;
+  left: 0;
+  right: 0;
+  outline: none;
+  margin: auto;
+  color: #000;
+}

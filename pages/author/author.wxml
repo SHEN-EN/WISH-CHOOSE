@@ -1,0 +1,10 @@
+<!--pages/author.wxml-->
+<view class="aut">
+<image class="aut_img" src="../image/aut.png"  lazy-load="false" binderror="" bindload="" />
+<text class="aut_text" selectable="false" space="false" decode="false">
+    亲,为了不影响小程序的使用,请求允许获取您的头像、昵称等基本信息！
+</text>
+ <button class="cu-btn bg-grey lg aut_button" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 允许授权 </button>
+</view>
+  
+  
