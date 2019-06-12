@@ -1,0 +1,40 @@
+/* pages/extract/extract.wxss */
+page{
+    background:#fffef6;
+}
+.choose{
+  text-align: center;
+  margin-top: 135rpx;
+}
+.choose .choose_words{
+  font-size: 36rpx;
+  display: block;
+  color: #000;
+}
+.choose .choose_title{
+  font-size: 20rpx;
+  color: #737171;
+  margin-top: 10rpx;
+}
+.chooseCard {
+  margin-top: 40rpx;
+  text-align: center;
+  padding-left: 8%;
+  box-sizing: border-box;
+}
+.chooseCard .chooseCard_img{
+  width: 28%;
+  height: 250rpx;
+  box-sizing: border-box;
+  margin-bottom: 2%;
+  margin-right: 5%;
+  opacity: .5
+}
+.next_button{
+  background: #fff6a7;
+  color: #000;
+  width: 330rpx;
+  border-radius: 50rpx;
+  margin-top: 100rpx;
+  margin-left: 27%;
+}

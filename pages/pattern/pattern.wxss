@@ -1,0 +1,18 @@
+/* pages/pattern/pattern.wxss */
+page{
+    background:#fffef6;
+}
+.choose{
+  text-align: center;
+  margin-top: 135rpx;
+}
+.choosePattern{
+  font-size: 36rpx;
+}
+swiper{
+  height: 900rpx;
+}
+.card-swiper {
+	height: 1000rpx !important;
+  margin-top: 60rpx;
+}

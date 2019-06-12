@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/extract/extract",
+    "pages/pattern/pattern",
     "pages/home/home",
     "pages/author/author",
     "pages/my/my"
