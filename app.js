@@ -11,7 +11,7 @@ App({
         wx.login({ //去请求接口获取sesseionid
           success: res => {
             wx.request({
-              url: 'http://10.3.13.32:5555/getCode',
+              url: 'http://139.155.146.164:5555/getCode',
               method: 'post',
               data: {
                 code: res.code

@@ -30,19 +30,32 @@ Page({
         success: res => {
           // 可以将 res 发送给后台解码出 unionId
           wx.request({
-            url: 'http://10.3.13.32:5555/userInfo',
+            url: 'http://139.155.146.164:5555/userInfo',
             method: 'post',
             data: {
               openid: wx.getStorageSync('openid'),
               userInfo: res.userInfo
             },
             success: result => {
-              //不用做任何操作测试用
+              console.log(result)
+              if(result.data.code==200){
+
+                this.setData({
+                  userInfo: e.detail.userInfo,
+                });
+                wx.setStorage({
+                  key: 'userInfo',
+                  data: res.userInfo
+                });
+                wx.redirectTo({
+                  url: '../home/home',
+                })
+              } else if (result.data.code==400){
+                wx.redirectTo({
+                  url: '../home/home',
+                })
+              }
             }
-          })
-          wx.setStorage({
-            key: 'userInfo',
-            data: res.userInfo
           })
           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
           // 所以此处加入 callback 以防止这种情况
@@ -50,12 +63,6 @@ Page({
             this.userInfoReadyCallback(res)
           }
         }
-      })
-      this.setData({
-        userInfo: e.detail.userInfo,
-      })
-      wx.redirectTo({
-        url: '../home/home',
       })
     }
   }
