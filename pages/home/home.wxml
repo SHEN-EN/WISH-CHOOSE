@@ -7,5 +7,5 @@
     </view>
   </swiper-item>
 </swiper>
-<foot id="foot" curryPage="{{curryPage}}"></foot>
+<foot id="foot" state="{{home}}"></foot>
 </view>

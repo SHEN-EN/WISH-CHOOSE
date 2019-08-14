@@ -1,10 +1,10 @@
 {
   "pages": [
+        "pages/my/my",
     "pages/author/author",
     "pages/extract/extract",
     "pages/pattern/pattern",
-    "pages/home/home",
-    "pages/my/my"
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",

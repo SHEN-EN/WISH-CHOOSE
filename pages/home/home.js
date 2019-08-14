@@ -19,6 +19,7 @@ Page({
       type: 'image',
       url: '../image/photo.png'
     }],
+    home:true
   },
 
   /**

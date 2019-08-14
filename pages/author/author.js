@@ -23,7 +23,6 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     if (e.detail.errMsg == "getUserInfo:ok") { //同意授权
       wx.getUserInfo({
@@ -39,7 +38,6 @@ Page({
             success: result => {
               console.log(result)
               if(result.data.code==200){
-
                 this.setData({
                   userInfo: e.detail.userInfo,
                 });

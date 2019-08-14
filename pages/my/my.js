@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    home:false,
+    headerImg: wx.getStorageSync('userInfo').avatarUrl,
+    nickName: wx.getStorageSync('userInfo').nickName
   },
 
   /**
@@ -19,7 +21,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.foot = this.selectComponent("#foot");
   },
 
   /**
