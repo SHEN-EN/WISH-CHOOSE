@@ -6,15 +6,19 @@ Page({
    */
   data: {
     home:false,
-    headerImg: wx.getStorageSync('userInfo').avatarUrl,
-    nickName: wx.getStorageSync('userInfo').nickName
+    headerImg: '',
+    nickName: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var userInfo = wx.getStorageSync('userInfo');
+    this.setData({ 
+      headerImg: userInfo.avatarUrl,
+      nickName: userInfo.nickName
+      })
   },
 
   /**

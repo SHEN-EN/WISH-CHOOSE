@@ -5,6 +5,11 @@
     亲,为了不影响小程序的使用,请求允许获取您的头像、昵称等基本信息！
 </text>
  <button class="cu-btn bg-grey lg aut_button" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 允许授权 </button>
+ <view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <!-- <image src='/images/logo.png' class='png' mode='aspectFit'></image> -->
+  <view class='gray-text'>授权中...</view>
+</view>
 </view>
   
   

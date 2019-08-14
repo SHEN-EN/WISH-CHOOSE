@@ -37,13 +37,21 @@ Page({
             },
             success: result => {
               console.log(result)
+              wx.setStorage({
+                key: 'userInfo',
+                data: res.userInfo
+              });
+              this.setData({
+                loadModal: true
+              })
+              setTimeout(() => {
+                this.setData({
+                  loadModal: false
+                })
+              }, 2000)
               if(result.data.code==200){
                 this.setData({
                   userInfo: e.detail.userInfo,
-                });
-                wx.setStorage({
-                  key: 'userInfo',
-                  data: res.userInfo
                 });
                 wx.redirectTo({
                   url: '../home/home',
