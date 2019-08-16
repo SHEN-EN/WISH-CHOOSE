@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/author/author",
+    "pages/home/home",
     "pages/extract/extract",
     "pages/pattern/pattern",
-    "pages/home/home",
+    "pages/author/author",
     "pages/my/my"
   ],
   "window": {

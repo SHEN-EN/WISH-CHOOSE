@@ -18,6 +18,48 @@ Page({
       id: 2,
       type: 'image',
       url: '../image/photo.png'
+    }, {
+      id: 3,
+      type: 'image',
+      url: '../image/photo.png'
+    }],
+    seriesList:[{
+      name: '基础卡',
+      url: '../image/home/series-1.png'
+    },{
+      name: '伴侣卡',
+      url: '../image/home/series-2.png'
+      }, {
+        name: '土著卡',
+        url: '../image/home/series-3.png'
+      }, {
+        name: '食物卡',
+        url: '../image/home/series-4.png'
+      }, {
+        name: '年轻人物卡',
+        url: '../image/home/series-5.png'
+      }, {
+        name: '天方夜谭卡',
+        url: '../image/home/series-6.png'
+      }, {
+        name: '克服卡',
+        url: '../image/home/series-7.png'
+      }, {
+        name: '天使卡',
+        url: '../image/home/series-8.png'
+      }],
+    hotPropList:[{
+      type: 'image',
+      url: '../image/home/hotProp-1.png'  
+    },{
+      type: 'image',
+      url: '../image/home/hotProp-2.png'
+    }, {
+      type: 'image',
+      url: '../image/home/hotProp-3.png'
+    }, {
+      type: 'image',
+      url: '../image/home/hotProp-4.png'
     }],
     home:true
   },
