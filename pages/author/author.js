@@ -29,7 +29,7 @@ Page({
         success: res => {
           // 可以将 res 发送给后台解码出 unionId
           wx.request({
-            url: 'http://139.155.146.164:5555/userInfo',
+            url: 'http://129.204.154.119:5555/userInfo',
             method: 'post',
             data: {
               openid: wx.getStorageSync('openid'),
