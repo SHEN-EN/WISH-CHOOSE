@@ -4,9 +4,9 @@ App({
     wx.checkSession({
         success: function() {
           //session_key 未过期，并且在本生命周期一直有效
-          wx.redirectTo({ //
-            url: '../../pages/home/home',
-          })
+          // wx.redirectTo({ //
+          //   url: '../../pages/home/home',
+          // })
         },
         fail: function() {
           // session_key 已经失效，需要重新执行登录流程

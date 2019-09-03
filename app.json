@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/extract/extract",
+    "pages/Awarenessdiary/Awarenessdiary",
     "pages/pattern/pattern",
+    "pages/extract/extract",
     "pages/author/author",
     "pages/my/my",
-    "pages/Awarenessdiary/Awarenessdiary"
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",

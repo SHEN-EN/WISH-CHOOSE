@@ -1,2 +1,2 @@
-<!--pages/Singlemode/Singlemode.wxml-->
+<!--pages/Awarenessdiary/Awarenessdiary.wxml-->
 <view> {{message}} </view>
