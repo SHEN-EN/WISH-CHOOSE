@@ -1,8 +1,11 @@
 // pages/Awarenessdiary/Awarenessdiary.js
 Page({
   data: {
-    text: "This is page data.",
-    message: 'Hello MINA!'
+    focus: false, // 输入框焦点获取
+    value: '', // 文本的内容
+    back: '../image/back.png',
+    cardface: '../image/cardface.png',
+    cardback: '../image/cardback.png'
   },
   onLoad: function(options) {
     // 页面创建时执行
