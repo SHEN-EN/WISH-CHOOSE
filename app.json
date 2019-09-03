@@ -4,7 +4,8 @@
     "pages/extract/extract",
     "pages/pattern/pattern",
     "pages/author/author",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/Awarenessdiary/Awarenessdiary"
   ],
   "window": {
     "backgroundTextStyle": "light",

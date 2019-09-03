@@ -1,0 +1,2 @@
+<!--pages/Singlemode/Singlemode.wxml-->
+<view> {{message}} </view>

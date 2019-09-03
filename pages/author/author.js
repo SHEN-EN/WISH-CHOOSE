@@ -49,14 +49,14 @@ Page({
                   loadModal: false
                 })
               }, 2000)
-              if(result.data.code==200){
+              if (result.data.code == 200) {
                 this.setData({
                   userInfo: e.detail.userInfo,
                 });
                 wx.redirectTo({
                   url: '../home/home',
                 })
-              } else if (result.data.code==400){
+              } else if (result.data.code == 400) {
                 wx.redirectTo({
                   url: '../home/home',
                 })

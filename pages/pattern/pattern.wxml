@@ -1,11 +1,10 @@
-
 <view class='choose'>
-    <text class="choosePattern">选择模式</text>
-  <swiper class="card-swiper"  circular="true"  bindchange="cardSwiper" >
-  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
-    <view class="swiper-item" bindtap='eventChoose'>
-      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
-    </view>
-  </swiper-item>
-</swiper>
+  <text class="choosePattern">选择模式</text>
+  <swiper class="card-swiper" circular="true" bindchange="cardSwiper">
+    <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item" bindtap='eventChoose'>
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      </view>
+    </swiper-item>
+  </swiper>
 </view>

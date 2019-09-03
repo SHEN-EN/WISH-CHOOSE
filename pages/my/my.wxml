@@ -1,32 +1,32 @@
 <!--pages/my.wxml-->
 <view class="my">
-    <view class="my_header">
-        <view class="my_header_top">
-            <image src="{{headerImg}}" class="my_header_img"></image>
-            <text class="my_header_nickName">你好,{{nickName}}</text>
-            <text class="my_header_text" >
+  <view class="my_header">
+    <view class="my_header_top">
+      <image src="{{headerImg}}" class="my_header_img"></image>
+      <text class="my_header_nickName">你好,{{nickName}}</text>
+      <text class="my_header_text">
                 您已连续觉察7天（今日还未觉察）
-            </text>  
-        </view>
+            </text>
     </view>
-    <view class="my_body">
-        <view>
-            <view class="my_body_list">
-                <image class="my_body_img" src="../image/book.png"  lazy-load="false"  />
-                  <text class="my_body_text">我的觉察</text>
-                <image class="my_body_gt" src="../image/&gt.png"  lazy-load="false" />     
-            </view>
-            <view class="my_body_list">
-                <image class="my_body_img" src="../image/tool.png"  lazy-load="false"  />
-                  <text class="my_body_text">已有工具</text>
-                <image class="my_body_gt" src="../image/&gt.png"  lazy-load="false" />     
-            </view>
-            <view class="my_body_list">
-                <image class="my_body_img" src="../image/setting.png"  lazy-load="false"  />
-                  <text class="my_body_text">设置</text>
-                <image class="my_body_gt" src="../image/&gt.png"  lazy-load="false" />     
-            </view>
-        </view>
+  </view>
+  <view class="my_body">
+    <view>
+      <view class="my_body_list">
+        <image class="my_body_img" src="../image/book.png" lazy-load="false" />
+        <text class="my_body_text">我的觉察</text>
+        <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />
+      </view>
+      <view class="my_body_list">
+        <image class="my_body_img" src="../image/tool.png" lazy-load="false" />
+        <text class="my_body_text">已有工具</text>
+        <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />
+      </view>
+      <view class="my_body_list">
+        <image class="my_body_img" src="../image/setting.png" lazy-load="false" />
+        <text class="my_body_text">设置</text>
+        <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />
+      </view>
     </view>
-    <foot id="foot"  state="{{home}}"></foot>   
+  </view>
+  <foot id="foot" state="{{home}}"></foot>
 </view>
