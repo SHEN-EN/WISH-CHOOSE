@@ -12,14 +12,14 @@
   <view class="home_seriesNav"> 
     <view class="home_series_icon"></view>
     <text class="home_series_name">OH卡 - 系列</text>
-    <text class="home_series_all">全部</text>
+    <text class="home_series_all" bindtap="selcet">全部</text>
   </view>
   <view class="home_seriesContent">
     <view  wx:for="{{seriesList}}">
       <image class="home_seriesContent_img" src="{{item.url}}">
       </image>
     </view>
-    <view class="home_seriesContent_nameTop"> 
+    <view class="home_seriesContent_nameTop" > 
       <text>基础卡</text>
       <text>伴侣卡</text>
       <text>土著卡</text>

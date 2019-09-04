@@ -68,7 +68,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      wx.request({
+        url: 'http://129.204.154.119:5555/get',
+        method: 'get',
+        data: {
+          
+        },
+        success: json => {
+          
+        }
+      })
   },
   DotStyle(e) {
     this.setData({
@@ -128,5 +137,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  selcet:function(){
+    wx.redirectTo({
+      url: '../../pages/pattern/pattern',
+    })
   }
 })
