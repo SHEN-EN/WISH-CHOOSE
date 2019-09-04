@@ -1,0 +1,15 @@
+<!--pages/Awarenessdiary/Awarenessdiary.wxml-->
+<view>
+  <view class='Awareness'>
+    <image src="{{back}}" mode="aspectFill"></image>
+    <text class='Awarenessdiary'>觉察日记</text>
+  </view>
+  <view class="Awareness-divLine"></view>
+  <view class="Awareness-section">
+    <textarea value="{{value}}" placeholder-style="color:#a7a7a7;font-weight:400;" placeholder="请在空白处写下觉察：" maxlength='-1' auto-focus/>
+  </view>
+  <view class='Awareness-card'>
+    <image class='Awareness-card-cardface' src="{{cardface}}" mode="aspectFill"></image>
+    <image class='Awareness-card-cardback' src="{{cardback}}" mode="aspectFill"></image>
+  </view>
+</view>

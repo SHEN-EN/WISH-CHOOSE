@@ -45,8 +45,8 @@ App({
                 }
               }
             })
-          }else{//未授权
-            wx.redirectTo({//重定向授权页
+          } else { //未授权
+            wx.redirectTo({ //重定向授权页
               url: '../../pages/author/author',
             })
           }
