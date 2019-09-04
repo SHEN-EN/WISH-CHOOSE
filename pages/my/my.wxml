@@ -11,7 +11,7 @@
   </view>
   <view class="my_body">
     <view>
-      <view class="my_body_list">
+      <view class="my_body_list" bindtap="awarenessdiary">
         <image class="my_body_img" src="../image/book.png" lazy-load="false" />
         <text class="my_body_text">我的觉察</text>
         <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />

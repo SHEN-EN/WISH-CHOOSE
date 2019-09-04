@@ -1,16 +1,20 @@
 {
   "pages": [
-    "pages/author/author",
     "pages/home/home",
+    "pages/author/author",
+    "pages/Awarenessdiary/Awarenessdiary",
     "pages/extract/extract",
     "pages/pattern/pattern",
     "pages/my/my"
   ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffee58",
-    "navigationBarTitleText": "睿择Wise Choose",
-    "navigationBarTextStyle": "black"
+
+  "window": 
+  {
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffee58",
+  "navigationBarTitleText": "睿择Wise Choose",
+  "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
 }
+ 

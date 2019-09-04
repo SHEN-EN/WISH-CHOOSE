@@ -1,4 +1,7 @@
 {
   "usingComponents": {},
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "black",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "觉察日记"
 }

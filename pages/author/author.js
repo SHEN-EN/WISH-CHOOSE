@@ -36,7 +36,6 @@ Page({
               userInfo: res.userInfo
             },
             success: result => {
-              console.log(result)
               wx.setStorage({
                 key: 'userInfo',
                 data: res.userInfo

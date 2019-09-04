@@ -68,5 +68,19 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  awarenessdiary:function(){
+    wx.redirectTo({
+      url: './../Awarenessdiary/Awarenessdiary',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   }
 })
