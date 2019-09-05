@@ -6,11 +6,13 @@ page {
 
 .choose {
   text-align: center;
-  margin-top: 135rpx;
+  margin-top: 75rpx;
 }
 
 .choosePattern {
   font-size: 36rpx;
+  position: relative;
+  top:60rpx;
 }
 
 swiper {
@@ -28,7 +30,7 @@ swiper {
 }
 
 .Awareness>image {
-  width: 18rpx;
-  height: 28rpx;
-  margin-left: 20rpx;
+  width: 30rpx;
+  height: 35rpx;
+  margin-left: 20rpx
 }

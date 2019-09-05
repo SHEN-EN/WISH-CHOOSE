@@ -31,9 +31,6 @@ Page({
       cardCur: e.detail.current
     })
   },
-  eventChoose() {
-    console.log('aa')
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -81,5 +78,16 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  toHome:function(){
+    wx.redirectTo({
+      url: '../../pages/home/home',
+    })
+  },
+  toExtract:function(){
+    console.log('a')
+    wx.redirectTo({
+      url:'../../pages/extract/extract'
+    })
   }
 })

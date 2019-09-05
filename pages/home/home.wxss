@@ -89,7 +89,7 @@ OH卡 - 系列
 }
 
 .home_seriesContent_nameBtm text {
-  margin: 0 30rpx;
+  margin: 0 34rpx;
 }
 
 .home_hotProp {

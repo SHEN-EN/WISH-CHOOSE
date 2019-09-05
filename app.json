@@ -6,7 +6,6 @@
     "pages/extract/extract",
     "pages/pattern/pattern",
     "pages/my/my"
-
   ],
 
   "window": 
@@ -17,5 +16,6 @@
   "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
+
 }
  

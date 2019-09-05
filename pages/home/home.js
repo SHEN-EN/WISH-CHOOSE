@@ -8,20 +8,12 @@ Page({
   data: {
     cardCur: 0,
     swiperList: [{
-      id: 0,
-      type: 'image',
       url: '../image/photo.png'
     }, {
-      id: 1,
-      type: 'image',
       url: '../image/photo.png',
     }, {
-      id: 2,
-      type: 'image',
       url: '../image/photo.png'
     }, {
-      id: 3,
-      type: 'image',
       url: '../image/photo.png'
     }],
     seriesList: [{
@@ -70,8 +62,8 @@ Page({
    */
   onLoad: function (options) {
       wx.request({
-        url: 'http://129.204.154.119:5555/get',
-        method: 'get',
+        url: 'http://129.204.154.119:5555/getBanner',
+        method: 'post',
         data: {
           
         },
