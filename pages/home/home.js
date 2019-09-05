@@ -62,7 +62,7 @@ Page({
    */
   onLoad: function (options) {
       wx.request({
-        url: 'http://129.204.154.119:5555/getBanner',
+        url: 'http://129.204.154.119:5555/getPhoto',
         method: 'post',
         data: {
           

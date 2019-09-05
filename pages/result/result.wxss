@@ -1,0 +1,36 @@
+/* pages/result/result.wxss */
+
+.Cards{
+    width: 475rpx;
+    height: 670rpx;
+    position: absolute;
+    top: 176rpx;
+    left: 138rpx;    
+}
+.wordCards{
+    width: 670rpx;
+    height: 870rpx;
+    position: relative;
+    margin-top: 80rpx;
+    margin-left: 35rpx;
+    z-index: -999;
+}
+.button{
+    margin-top: 10%;
+}
+.button .diary{
+    line-height: 80rpx;
+    width: 265rpx;
+    height: 80rpx;
+    background: #ffea2e;
+    float: left;
+    border-radius: 50rpx;
+    margin-left: 10%;
+}
+.button .consult{
+    line-height: 80rpx;
+    width: 265rpx;
+    height: 80rpx;
+    background: #70e88f;
+    border-radius: 50rpx;
+}

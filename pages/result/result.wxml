@@ -1,0 +1,15 @@
+<!--pages/result/result.wxml-->
+<view class="DrawResult">
+  <view class="Image" hover-class="none" hover-stop-propagation="false">
+    <view >
+      <image class="Cards" src="../image/home/dangerous-1.png"></image>
+    </view>
+    <view >
+      <image class="wordCards" src="../image/home/dangerous.png"></image>
+    </view>
+  </view>
+  <view class="button">
+    <button class="diary"> 觉察日记 </button>
+    <button class="consult"> 寻求咨询 </button>
+  </view>
+</view>

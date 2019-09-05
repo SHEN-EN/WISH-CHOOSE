@@ -27,9 +27,9 @@ Page({
   start: function() {
     let animation = wx.createAnimation({
       duration: 2000,
-      timingFunction: 'linear',
+      timingFunction: 'ease-in-out',
     })
-    animation.opacity(.8).step()
+    animation.opacity(.8).translate(-350,0).step()
     this.setData({
       cardsAnimation: animation.export()
     })
@@ -81,5 +81,10 @@ Page({
    */
   onShareAppMessage: function() {
 
-  }
+  },
+  goNext:function () { 
+    wx.redirectTo({
+      url: '../../pages/cards/cards',
+    })
+   }
 })
