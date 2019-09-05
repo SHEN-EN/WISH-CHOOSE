@@ -9,7 +9,7 @@
     </view>
   </view>
   <view class="button">
-    <button class="diary"> 觉察日记 </button>
+    <button class="diary" bindtap="selectDiary"> 觉察日记 </button>
     <button class="consult"> 寻求咨询 </button>
   </view>
 </view>

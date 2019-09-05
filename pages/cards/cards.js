@@ -92,5 +92,10 @@ Page({
       key: 'imgCar',
       data: e.target.dataset.src,
     })
+  },
+  selcetResult: function () {
+    wx.redirectTo({
+      url: '../../pages/result/result',
+    })
   }
 })

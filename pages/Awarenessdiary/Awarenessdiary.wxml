@@ -9,6 +9,9 @@
     <textarea value="{{value}}" placeholder-style="color:#a7a7a7;font-weight:400;" placeholder="请在空白处写下觉察：" maxlength='-1' auto-focus/>
   </view>
   <view class='Awareness-card'>
+    <view>1.我看到了什么</view>
+    <view>2.我想到了什么</view>
+    <view>3.我察觉到了什么</view>
     <image class='Awareness-card-cardface' src="{{cardface}}" mode="aspectFill"></image>
     <image class='Awareness-card-cardback' src="{{cardback}}" mode="aspectFill"></image>
   </view>
