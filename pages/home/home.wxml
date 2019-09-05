@@ -1,16 +1,3 @@
-末圪:
-[链接]
-
-Winterwinter.:
-[视频聊天]
-
-Winterwinter.:
-[文件]
-
-末圪:
-[图片]
-
-Winterwinter.:
 <!-- pages/home/home.wxml -->
 <view>
   <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="4000" duration="500" bindchange="cardSwiper" indicator-color="#fffacd" indicator-active-color="#ffee58">
