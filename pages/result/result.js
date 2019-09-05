@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  selectDiary: function () {
+    wx.redirectTo({
+      url: '../../pages/Awarenessdiary/Awarenessdiary',
+    })
   }
 })
