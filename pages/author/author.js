@@ -25,6 +25,23 @@ Page({
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
     if (e.detail.errMsg == "getUserInfo:ok") { //同意授权
+      wx.login({ //去请求接口获取sesseionid
+        success: res => {
+          wx.request({
+            url: 'http://129.204.154.119:5555/getCode',
+            method: 'post',
+            data: {
+              code: res.code
+            },
+            success: json => {
+              wx.setStorage({
+                key: 'openid',
+                data: json.data.value.openid,
+              })
+            }
+          })
+        }
+      }) 
       wx.getUserInfo({
         success: res => {
           // 可以将 res 发送给后台解码出 unionId

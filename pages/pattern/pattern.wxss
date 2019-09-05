@@ -21,3 +21,14 @@ swiper {
   height: 1000rpx !important;
   margin-top: 60rpx;
 }
+.Awareness {
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.Awareness>image {
+  width: 18rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}

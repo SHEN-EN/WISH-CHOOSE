@@ -1,4 +1,7 @@
 <view class='choose'>
+  <view class='Awareness'>
+    <image src="../image/back.png"></image>
+  </view>
   <text class="choosePattern">选择模式</text>
   <swiper class="card-swiper" circular="true" bindchange="cardSwiper">
     <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
