@@ -11,28 +11,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://129.204.154.119:5555/getPhoto',
-      method: 'post',
-      data: {},
-      success: json => {
-        let imgList=[];
-        json.data.result.forEach(item => {    
-          imgList.push({image:item.image})
-          this.setData({
-            cardsImg:imgList
-          })
 
-        });
-      }
-    })
   },
   start: function() {
     let animation = wx.createAnimation({
       duration: 2000,
       timingFunction: 'ease-in-out',
     })
-    animation.opacity(.8).translate(-350,0).step()
+    animation.opacity(1).translate(0,0).step()
     this.setData({
       cardsAnimation: animation.export()
     })
@@ -48,7 +34,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.start()    
+    wx.request({
+      url: 'http://129.204.154.119:5555/getPhoto',
+      method: 'post',
+      data: {},
+      success: json => {
+        let imgList=[];
+        json.data.result.forEach(item => {    
+          imgList.push({image:item.image,sideImg:'../image/Cards-1.png'})
+          this.setData({
+            cardsImg:imgList
+          })
+          this.start()    
+        });
+      }
+    })
+    
   },
 
   /**

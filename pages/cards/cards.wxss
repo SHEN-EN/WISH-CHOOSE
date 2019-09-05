@@ -26,7 +26,8 @@ page {
   text-align: center;
   padding-left: 8%;
   box-sizing: border-box;
-  transform: translate(700rpx,0rpx)
+  transform: translate(700rpx,0rpx);
+  opacity: 0.3;
 }
 
 .chooseCard .chooseCard_img {
@@ -35,7 +36,6 @@ page {
   box-sizing: border-box;
   margin-bottom: 2%;
   margin-right: 5%;
-  opacity: 0.3;
 }
 
 .next_button {
