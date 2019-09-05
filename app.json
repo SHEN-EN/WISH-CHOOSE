@@ -1,10 +1,12 @@
 {
   "pages": [
+    "pages/Awarenessdiary/Awarenessdiary",
     "pages/author/author",
     "pages/home/home",
     "pages/extract/extract",
     "pages/pattern/pattern",
     "pages/my/my"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

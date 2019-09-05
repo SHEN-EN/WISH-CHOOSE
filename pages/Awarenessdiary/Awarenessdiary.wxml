@@ -1,7 +1,7 @@
 <!--pages/Awarenessdiary/Awarenessdiary.wxml-->
 <view>
   <view class='Awareness'>
-    <image src="{{back}}" mode="aspectFill"></image>
+    <image src="../image/back.png" mode="aspectFill"></image>
     <text class='Awarenessdiary'>觉察日记</text>
   </view>
   <view class="Awareness-divLine"></view>
