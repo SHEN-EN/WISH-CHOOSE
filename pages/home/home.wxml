@@ -1,4 +1,17 @@
-<!--pages/home/home.wxml-->
+末圪:
+[链接]
+
+Winterwinter.:
+[视频聊天]
+
+Winterwinter.:
+[文件]
+
+末圪:
+[图片]
+
+Winterwinter.:
+<!-- pages/home/home.wxml -->
 <view>
   <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="4000" duration="500" bindchange="cardSwiper" indicator-color="#fffacd" indicator-active-color="#ffee58">
     <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
@@ -11,28 +24,25 @@
   <view class="home_series">
     <view class="home_seriesNav">
       <view class="home_series_icon"></view>
-      <text class="home_series_name">OH卡 - 系列</text>
+      <text class="home_series_name">OH卡-系列</text>
       <text class="home_series_all">全部</text>
     </view>
-  </swiper-item>
-</swiper>
-<!-- OH卡-系列 -->
-<view class="home_series">
-  <view class="home_seriesNav"> 
-    <view class="home_series_icon"></view>
-    <text class="home_series_name">OH卡 - 系列</text>
-    <text class="home_series_all" bindtap="selcet">全部</text>
-  </view>
-  <view class="home_seriesContent">
-    <view  wx:for="{{seriesList}}">
-      <image class="home_seriesContent_img" src="{{item.url}}">
-      </image>
-    </view>
-    <view class="home_seriesContent_nameTop" > 
-      <text>基础卡</text>
-      <text>伴侣卡</text>
-      <text>土著卡</text>
-      <text>食物卡</text>
+    <view class="home_seriesContent">
+      <view wx:for="{{seriesList}}">
+        <image class="home_seriesContent_img" src="{{item.url}}"></image>
+      </view>
+      <view class="home_seriesContent_nameTop">
+        <text>基础卡</text>
+        <text>伴侣卡</text>
+        <text>土著卡</text>
+        <text>食物卡</text>
+      </view>
+      <view class="home_seriesContent_nameBtm">
+        <text>年轻人物卡</text>
+        <text>天方夜谭卡</text>
+        <text>克服卡</text>
+        <text>天使卡</text>
+      </view>
     </view>
     <!-- 热门道具 -->
     <view class="home_hotProp">
