@@ -4,24 +4,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cardsImg:[
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-      '../image/Cards-1.png',
-    ]
+    cardsImg:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.request({
+      url: 'http://129.204.154.119:5555/getPhoto',
+      method: 'post',
+      data: {},
+      success: json => {
+        let imgList=[];
+        json.data.result.forEach(item => {    
+          imgList.push({image:item.image})
+          this.setData({
+            cardsImg:imgList
+          })
+
+        });
+      }
+    })
   },
   start: function() {
     let animation = wx.createAnimation({
@@ -80,5 +84,12 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  selectCar:function(e){
+    console.log(e)
+    wx.setStorage({
+      key: 'imgCar',
+      data: e.target.dataset.src,
+    })
   }
 })

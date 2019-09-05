@@ -61,16 +61,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      wx.request({
-        url: 'http://129.204.154.119:5555/getPhoto',
-        method: 'post',
-        data: {
-          
-        },
-        success: json => {
-          console.log(json)
-        }
-      }),
       wx.getSetting({
         success: res => {
           if (res.authSetting['scope.userInfo']) {

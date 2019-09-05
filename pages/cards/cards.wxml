@@ -4,7 +4,7 @@
     <text class="choose_title">根据直觉选择一张卡牌</text>
   </view>
   <view class='chooseCard'>
-    <image src="{{item}}" class="chooseCard_img" wx:for="{{cardsImg}}" wx:key animation="{{cardsAnimation}}"></image>
+    <image src='../image/Cards-1.png' class="chooseCard_img" wx:for="{{cardsImg}}" wx:key animation="{{cardsAnimation}}" data-src="{{item.image}}" bindtap="selectCar"></image>
   </view>
  <button class="cu-btn bg-grey lg next_button" > 下一步 </button>
 </view>
