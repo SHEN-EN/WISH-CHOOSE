@@ -8,9 +8,10 @@ Page({
     cardback: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardback.png'
   },
   showLoading() {
-    wx.showLoading({
-      title: '是否保存改觉察日记', //提示的内容
-      mask: true, //是否显示透明蒙层，防止触摸穿透
+    wx.showModal({
+      content: '是否保存改觉察日记', //提示的内容
+      cancelTex: '不保存', //取消按钮的文字
+      confirmText: '保存', //确认按钮的文字
       success: function() {
         wx.redirectTo({
           url: '../../pages/home/home',
