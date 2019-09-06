@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cardsImg:[]
+    cardsImg:[],
+    display:false
   },
 
   /**
@@ -37,13 +38,16 @@ Page({
     wx.request({
       url: 'http://129.204.154.119:5555/api/getPhoto',
       method: 'post',
-      data: {},
+      data: {
+        type:'photo'
+      },
       success: json => {
         let imgList=[];
         json.data.result.forEach((item,index) => {    
           imgList.push({ id:index,image: item.image, sideImg:'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards-1.png',click:''}) //sideIMG背面src image隐藏src
           this.setData({
-            cardsImg:imgList
+            cardsImg:imgList,
+            display:true
           })
           this.start()    
         });

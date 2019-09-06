@@ -3,9 +3,8 @@ Page({
   data: {
     focus: false, // 输入框焦点获取
     value: '', // 文本的内容
-    back: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/Awarenessdiary/back.png',
-    cardface: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardface.png',
-    cardback: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardback.png'
+    cardface: '',
+    cardback: ''
   },
   showLoading() {
     wx.showModal({
@@ -29,6 +28,10 @@ Page({
   },
   onLoad: function(options) {
     // 页面创建时执行
+    this.setData({
+      cardface:wx.getStorageSync('imgCar'),
+      cardback:wx.getStorageSync('imgTextCar')
+    })
     wx.request({
       url: 'http://129.204.154.119:5555/api/saveStory',
       data: {},

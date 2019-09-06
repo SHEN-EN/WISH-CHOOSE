@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/cards/cards",
     "pages/home/home",
+    "pages/cards/cards",
+    "pages/extract/extract",
     "pages/author/author",
     "pages/result/result",
     "pages/my/my",
     "pages/pattern/pattern",
-    "pages/extract/extract",
     "pages/Awarenessdiary/Awarenessdiary"
   ],
 

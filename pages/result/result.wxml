@@ -5,7 +5,7 @@
       <image class="Cards" src="{{Cards}}"></image>
     </view>
     <view >
-      <image class="wordCards" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardback.png"></image>
+      <image class="wordCards" src="{{wordCards}}"></image>
     </view>
   </view>
   <view class="button">

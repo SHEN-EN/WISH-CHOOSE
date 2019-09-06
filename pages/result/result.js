@@ -14,7 +14,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-        Cards:wx.getStorageSync('imgCar')
+        Cards:wx.getStorageSync('imgCar'),
+        wordCards:wx.getStorageSync('imgTextCar')
     })
   },
 

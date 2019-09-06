@@ -1,10 +1,10 @@
 <view>
   <view class="choose">
-    <text class="choose_words">文字卡</text>
+    <text class="choose_words">图卡</text>
     <text class="choose_title">根据直觉选择一张卡牌</text>
   </view>
-  <view class='chooseCard'>
-    <image src="{{item}}" class="chooseCard_img" wx:for="{{cardsImg}}" wx:key animation="{{cardsAnimation}}"></image>
+  <view class='chooseCard' animation="{{cardsAnimation}}">
+    <image src='{{item.sideImg}}' class="chooseCard_img {{item.click}}" wx:for="{{cardsImg}}" wx:key  data-src="{{item.image}}" bindtap="selectCar" data-id="{{item.id}}"></image>
   </view>
-  <button class="cu-btn bg-grey lg next_button" bindtap="goNext"> 下一步 </button>
+ <button class="cu-btn bg-grey lg next_button" bindtap="selcetResult" wx:if="{{display}}"> 下一步 </button>
 </view>
