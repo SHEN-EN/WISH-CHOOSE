@@ -29,6 +29,14 @@ Page({
   },
   onLoad: function(options) {
     // 页面创建时执行
+    wx.request({
+      url: 'http://129.204.154.119:5555/api/saveStory',
+      data: {},
+      method: 'post', 
+      success: function(res){
+          console.log(res)
+      }
+    })
   },
   onShow: function() {
     // 页面出现在前台时执行
