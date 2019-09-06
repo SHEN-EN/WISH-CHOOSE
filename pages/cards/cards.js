@@ -41,7 +41,7 @@ Page({
       success: json => {
         let imgList=[];
         json.data.result.forEach(item => {    
-          imgList.push({image:item.image,sideImg:'../image/Cards-1.png'})
+          imgList.push({ image: item.image, sideImg:'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards-1.png'})
           this.setData({
             cardsImg:imgList
           })
