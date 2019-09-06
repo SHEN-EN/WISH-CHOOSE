@@ -12,19 +12,19 @@
   <view class="my_body">
     <view>
       <view class="my_body_list" bindtap="awarenessdiary">
-        <image class="my_body_img" src="../image/book.png" lazy-load="false" />
+        <image class="my_body_img" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/my/book.png" lazy-load="false" />
         <text class="my_body_text">我的觉察</text>
-        <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />
+        <image class="my_body_gt" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/my/%26gt.png" lazy-load="false" />
       </view>
       <view class="my_body_list">
-        <image class="my_body_img" src="../image/tool.png" lazy-load="false" />
+        <image class="my_body_img" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/my/tool.png" lazy-load="false" />
         <text class="my_body_text">已有工具</text>
-        <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />
+        <image class="my_body_gt" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/my/%26gt.png" lazy-load="false" />
       </view>
       <view class="my_body_list">
-        <image class="my_body_img" src="../image/setting.png" lazy-load="false" />
+        <image class="my_body_img" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/my/setting.png" lazy-load="false" />
         <text class="my_body_text">设置</text>
-        <image class="my_body_gt" src="../image/&gt.png" lazy-load="false" />
+        <image class="my_body_gt" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/my/%26gt.png" lazy-load="false" />
       </view>
     </view>
   </view>

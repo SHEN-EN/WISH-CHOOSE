@@ -6,15 +6,15 @@ Page({
    */
   data: {
     cardsImg: [
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
-      '../image/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
+      'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/Cards.png',
     ]
   },
 

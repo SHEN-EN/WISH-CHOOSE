@@ -9,15 +9,15 @@ Page({
     swiperList: [{
       id: 0,
       type: 'image',
-      url: '../image/pattern.png'
+      url: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/pattern/pattern.png'
     }, {
       id: 1,
       type: 'image',
-      url: '../image/pattern.png',
+        url: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/pattern/pattern.png',
     }, {
       id: 2,
       type: 'image',
-      url: '../image/pattern.png'
+        url: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/pattern/pattern.png'
     }],
   },
 

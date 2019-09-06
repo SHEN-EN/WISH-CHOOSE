@@ -3,9 +3,9 @@ Page({
   data: {
     focus: false, // 输入框焦点获取
     value: '', // 文本的内容
-    back: '../image/back.png',
-    cardface: '../image/cardface.png',
-    cardback: '../image/cardback.png'
+    back: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/Awarenessdiary/back.png',
+    cardface: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardface.png',
+    cardback: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardback.png'
   },
   onLoad: function (options) {
     // 页面创建时执行
