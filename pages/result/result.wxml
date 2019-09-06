@@ -2,7 +2,7 @@
 <view class="DrawResult">
   <view class="Image" hover-class="none" hover-stop-propagation="false">
     <view >
-      <image class="Cards" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardface.png"></image>
+      <image class="Cards" src="{{Cards}}"></image>
     </view>
     <view >
       <image class="wordCards" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/cardback.png"></image>

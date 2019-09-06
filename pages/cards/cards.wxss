@@ -37,7 +37,9 @@ page {
   margin-bottom: 2%;
   margin-right: 5%;
 }
-
+.select{
+    box-shadow:0px 0px 15rpx #757373;
+}
 .next_button {
   background: #fff6a7;
   color: #000;

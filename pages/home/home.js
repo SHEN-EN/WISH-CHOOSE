@@ -68,7 +68,7 @@ Page({
             wx.login({ //去请求接口获取sesseionid
               success: res => {
                 wx.request({
-                  url: 'http://129.204.154.119:5555/getCode',
+                  url: 'http://129.204.154.119:5555/api/getCode',
                   method: 'post',
                   data: {
                     code: res.code
@@ -80,7 +80,7 @@ Page({
                         // 可以将 res 发送给后台解码出 unionId
                         app.globalData.userInfo = res.userInfo;
                         wx.request({
-                          url: 'http://129.204.154.119:5555/userInfo',
+                          url: 'http://129.204.154.119:5555/api/userInfo',
                           method: 'post',
                           data: {
                             openid: wx.getStorageSync('openid'),
