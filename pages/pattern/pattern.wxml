@@ -1,6 +1,6 @@
 <view class='choose'>
   <view class='Awareness'>
-    <image src="../image/back.png" bindtap="toHome"></image>
+    <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/Awarenessdiary/back.png" bindtap="toHome"></image>
   </view>
   <text class="choosePattern">选择模式</text>
   <swiper class="card-swiper" circular="true" bindchange="cardSwiper">

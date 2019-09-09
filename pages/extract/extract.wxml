@@ -1,6 +1,6 @@
 <view>
   <view class="choose">
-    <text class="choose_words">图卡</text>
+    <text class="choose_words">文字卡</text>
     <text class="choose_title">根据直觉选择一张卡牌</text>
   </view>
   <view class='chooseCard' animation="{{cardsAnimation}}">
