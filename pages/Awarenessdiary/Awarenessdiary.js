@@ -12,46 +12,51 @@ Page({
       content: '是否保存改觉察日记', //提示的内容
       cancelTex: '不保存', //取消按钮的文字
       confirmText: '保存', //确认按钮的文字
-      success: function() {
-        
-        if (!that.data.value) {
-          wx.showToast({
-            title: '请填写觉察内容',
-            icon: 'none',
-            duration: 1000
-          })
-        }else{
-          let StoryList=[];
-          StoryList.push({
-            createTime:+new Date,
-            imgTextCar:wx.getStorageSync('imgTextCar'),
-            imgCar:wx.getStorageSync('imgCar'),
-            storyValue:that.data.value
-          })
-          wx.request({
-            url: 'http://129.204.154.119:5555/api/saveStory',
-            data: {
-              openid:wx.getStorageSync('openid'),
-              storyInf:JSON.stringify(StoryList)
-            },
-            method: 'post', 
-            success: function(res){
-                if (res.data.code==200) {
-                wx.showToast({
-                      title: '保存成功',
-                      icon: 'success',
-                      duration: 1000
-                    })
-                    setTimeout(()=>{
-                      wx.redirectTo({
-                        url: '../../pages/home/home',
-                      });
-                    },1200)
+      success: function(res) {
+        if (res.confirm) {
+          if (!that.data.value) {
+            wx.showToast({
+              title: '请输入觉察内容',
+              icon: 'success',
+              duration: 1000
+            })
+          }else{
+            let StoryList=[];
+            StoryList.push({
+              createTime:+new Date,
+              imgTextCar:wx.getStorageSync('imgTextCar'),
+              imgCar:wx.getStorageSync('imgCar'),
+              storyValue:that.data.value
+            })
+            wx.request({
+              url: 'http://129.204.154.119:5555/api/saveStory',
+              data: {
+                openid:wx.getStorageSync('openid'),
+                storyInf:JSON.stringify(StoryList)
+              },
+              method: 'post', 
+              success: function(res){
+                  if (res.data.code==200) {
+                  wx.showToast({
+                        title: '保存成功',
+                        icon: 'success',
+                        duration: 1000
+                      })
+                  setTimeout(()=>{
+                        wx.redirectTo({
+                          url: '../../pages/home/home',
+                        });
+                  },1200)
+                }
               }
-            }
-          })
+            })
+          }  
+        }else if(res.cancel){
+          wx.redirectTo({
+            url: '../../pages/home/home',
+          });
         }
-      }, //接口调用成功的回调函数
+      }
     });
     setTimeout(function() {
       wx.hideLoading();
