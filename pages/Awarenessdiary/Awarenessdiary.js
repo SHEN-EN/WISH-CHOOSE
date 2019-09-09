@@ -7,20 +7,51 @@ Page({
     cardback: ''
   },
   showLoading() {
+    let that=this //保存this
     wx.showModal({
       content: '是否保存改觉察日记', //提示的内容
       cancelTex: '不保存', //取消按钮的文字
       confirmText: '保存', //确认按钮的文字
       success: function() {
-        wx.redirectTo({
-          url: '../../pages/home/home',
-        });
+        
+        if (!that.data.value) {
+          wx.showToast({
+            title: '请填写觉察内容',
+            icon: 'none',
+            duration: 1000
+          })
+        }else{
+          let StoryList=[];
+          StoryList.push({
+            createTime:+new Date,
+            imgTextCar:wx.getStorageSync('imgTextCar'),
+            imgCar:wx.getStorageSync('imgCar'),
+            storyValue:that.data.value
+          })
+          wx.request({
+            url: 'http://129.204.154.119:5555/api/saveStory',
+            data: {
+              openid:wx.getStorageSync('openid'),
+              storyInf:JSON.stringify(StoryList)
+            },
+            method: 'post', 
+            success: function(res){
+                if (res.data.code==200) {
+                wx.showToast({
+                      title: '保存成功',
+                      icon: 'success',
+                      duration: 1000
+                    })
+                    setTimeout(()=>{
+                      wx.redirectTo({
+                        url: '../../pages/home/home',
+                      });
+                    },1200)
+              }
+            }
+          })
+        }
       }, //接口调用成功的回调函数
-      fail: function() {
-        wx.redirectTo({
-          url: '../../pages/home/home',
-        });
-      }, //接口调用失败的回调函数
     });
     setTimeout(function() {
       wx.hideLoading();
@@ -31,14 +62,6 @@ Page({
     this.setData({
       cardface:wx.getStorageSync('imgCar'),
       cardback:wx.getStorageSync('imgTextCar')
-    })
-    wx.request({
-      url: 'http://129.204.154.119:5555/api/saveStory',
-      data: {},
-      method: 'post', 
-      success: function(res){
-          console.log(res)
-      }
     })
   },
   onShow: function() {
@@ -68,22 +91,9 @@ Page({
   onResize: function() {
     // 页面尺寸变化时执行
   },
-  onTabItemTap(item) {
-    // tab 点击时执行
-    console.log(item.index);
-    console.log(item.pagePath);
-    console.log(item.text);
-  },
-  // 事件响应函数
-  viewTap: function() {
-    this.setData({
-      text: 'Set some data for updating view.'
-    }, function() {
-      // this is setData callback
-    });
-  },
-  // 自由数据
-  customData: {
-    hi: 'MINA'
-  }
+  valueChange:function (e) {  //同步更新value
+      this.setData({
+        value:e.detail.value
+      })
+   }
 });

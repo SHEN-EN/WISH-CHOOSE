@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/Awarenessdiary/Awarenessdiary",
     "pages/cards/cards",
     "pages/extract/extract",
     "pages/author/author",
     "pages/result/result",
     "pages/my/my",
-    "pages/pattern/pattern",
-    "pages/Awarenessdiary/Awarenessdiary"
+    "pages/pattern/pattern"
   ],
 
   "window": 

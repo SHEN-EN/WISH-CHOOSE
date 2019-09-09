@@ -6,7 +6,7 @@
   </view>
   <view class="Awareness-divLine"></view>
   <view class="Awareness-section">
-    <textarea value="{{value}}" placeholder-style="color:#a7a7a7;font-weight:400;" placeholder="请在空白处写下觉察：" maxlength='-1' auto-focus />
+    <textarea value="{{value}}" placeholder-style="color:#a7a7a7;font-weight:400;" placeholder="请在空白处写下觉察：" maxlength='-1' auto-focus  bindinput="valueChange"/>
   </view>
   <view class='Awareness-card'>
     <view>1.我看到了什么</view>
