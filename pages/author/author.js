@@ -35,6 +35,8 @@ Page({
             },
             success: json => {
               wx.setStorageSync('openid', json.data.value.openid)
+              wx.setStorageSync('session_key', json.data.value.session_key)
+
               wx.getUserInfo({
                 success: res => {
                   // 可以将 res 发送给后台解码出 unionId

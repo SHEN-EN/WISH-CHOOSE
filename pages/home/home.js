@@ -61,56 +61,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      wx.getSetting({
-        success: res => {
-          if (res.authSetting['scope.userInfo']) {
-            // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-            wx.login({ //去请求接口获取sesseionid
-              success: res => {
-                wx.request({
-                  url: 'http://129.204.154.119:5555/api/getCode',
-                  method: 'post',
-                  data: {
-                    code: res.code
-                  },
-                  success: json => {
-                    wx.setStorageSync('openid', json.data.value.openid);
-                    wx.getUserInfo({
-                      success: res => {
-                        // 可以将 res 发送给后台解码出 unionId
-                        app.globalData.userInfo = res.userInfo;
-                        wx.request({
-                          url: 'http://129.204.154.119:5555/api/userInfo',
-                          method: 'post',
-                          data: {
-                            openid: wx.getStorageSync('openid'),
-                            userInfo: res.userInfo
-                          },
-                          success: result => {
-                            wx.setStorage({
-                              key: 'userInfo',
-                              data: res.userInfo
-                            });
-                          }
-                        });
-                        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                        // 所以此处加入 callback 以防止这种情况
-                        if (this.userInfoReadyCallback) {
-                          this.userInfoReadyCallback(res);
-                        }
-                      }
-                    });
-                  }
-                });
-              }
-            });
-          } else { //未授权
-            wx.redirectTo({ //重定向授权页
-              url: '../../pages/author/author',
-            });
-          }
+    wx.checkSession({
+      success (e) {
+        //session_key 未过期，并且在本生命周期一直有效
+        if(!wx.getStorageSync('session_key')){
+          wx.redirectTo({ //重定向授权页
+            url: '../../pages/author/author',
+          });
         }
-      });
+      },
+      fail (e) {
+        wx.redirectTo({ //重定向授权页
+          url: '../../pages/author/author',
+        });
+      }
+    })
   },
   DotStyle(e) {
     this.setData({
