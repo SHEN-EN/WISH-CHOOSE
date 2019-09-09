@@ -17,7 +17,7 @@ Page({
           if (!that.data.value) {
             wx.showToast({
               title: '请输入觉察内容',
-              icon: 'success',
+              icon: 'none',
               duration: 1000
             })
           }else{
