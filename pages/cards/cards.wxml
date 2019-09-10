@@ -6,5 +6,5 @@
   <view class='chooseCard' animation="{{cardsAnimation}}">
     <image src='{{item.sideImg}}' class="chooseCard_img {{item.click}}" wx:for="{{cardsImg}}" wx:key  data-src="{{item.image}}" bindtap="selectCar" data-id="{{item.id}}"></image>
   </view>
- <button class="cu-btn bg-grey lg next_button" bindtap="selcetResult" wx:if="{{display}}"> 下一步 </button>
+ <button class="cu-btn bg-grey lg next_button" bindtap="selcetResult" wx:if="{{display}}" style="background:{{color}}"> 下一步 </button>
 </view>

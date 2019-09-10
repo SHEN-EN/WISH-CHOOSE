@@ -6,6 +6,7 @@ Page({
   data: {
     cardsImg:[],
     display:false,
+    color:"",//按钮颜色
   },
 
   /**
@@ -91,6 +92,9 @@ Page({
     
   },
   selectCar:function(e){
+    this.setData({
+      color:'#ffeb3b'
+    })
     for (let i = 0; i < this.data.cardsImg.length; i++) {
         this.data.cardsImg[i].click='';
         this.setData({
