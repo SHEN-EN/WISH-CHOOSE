@@ -4,8 +4,9 @@
     width: 475rpx;
     height: 670rpx;
     position: absolute;
-    top: 176rpx;
-    left: 138rpx;    
+    top: 179rpx;
+    left: 127rpx;
+    border-radius: 10px;
 }
 .wordCards{
     width: 670rpx;
@@ -14,6 +15,7 @@
     margin-top: 80rpx;
     margin-left: 35rpx;
     z-index: -999;
+    border-radius: 18px;
 }
 .button{
     margin-top: 10%;
@@ -33,4 +35,18 @@
     height: 80rpx;
     background: #70e88f;
     border-radius: 50rpx;
+}
+.button .diary_icon {
+    width: 30rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 11px;
+}
+.button .consult_icon{
+    width: 45rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 9rpx;
 }

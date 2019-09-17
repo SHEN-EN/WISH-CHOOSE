@@ -9,7 +9,13 @@
     </view>
   </view>
   <view class="button">
-    <button class="diary" bindtap="selectDiary"> 觉察日记 </button>
-    <button class="consult"> 寻求咨询 </button>
+    <button class="diary" bindtap="selectDiary">  
+      <text>觉察日记</text>  
+      <image class="diary_icon" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/pencli.png"></image>
+    </button>
+    <button class="consult">
+      <text>寻求咨询</text> 
+      <image class="consult_icon" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/result/backle.png"></image> 
+    </button>
   </view>
 </view>

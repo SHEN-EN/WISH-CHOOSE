@@ -2,6 +2,7 @@
 
 page {
   background: #fffef6;
+  background-image: url(https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/cards/wenli.png);
 }
 
 .choose {
