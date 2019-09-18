@@ -1,0 +1,19 @@
+<!--pages/history.wxml-->
+<view>
+    <view id="date">
+    <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
+            <swiper-item wx:for="{{nextMonth}}" >
+               <view class="year_month" bindtap="changeYear">{{year}}/{{month}}</view>
+                    <text class="day">一</text>
+                    <text class="day">二</text>
+                    <text class="day">三</text>
+                    <text class="day">四</text>
+                    <text class="day">五</text>
+                    <text class="day">六</text>
+                    <text class="day">日</text>
+                    <text wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
+            </swiper-item>
+    </swiper>
+     </view>
+</view>
+  

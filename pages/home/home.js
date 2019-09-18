@@ -133,8 +133,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
-
+  onShareAppMessage: function(e) {
+    return {
+      title: '首页', //转发的标题。当前小程序名称
+      path: `pages/home/home`, //转发的路径
+      imageUrl: '',//自定义图片路径 支持PNG及JPG。显示图片长宽比是 5:4。
+  }
   },
   selcet:function(){
     wx.redirectTo({

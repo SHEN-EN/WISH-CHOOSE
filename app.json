@@ -1,23 +1,20 @@
 {
   "pages": [
+    "pages/history/history",
+    "pages/home/home",
     "pages/cards/cards",
     "pages/result/result",
     "pages/extract/extract",
-    "pages/home/home",
     "pages/author/author",
     "pages/Awarenessdiary/Awarenessdiary",
     "pages/my/my",
     "pages/pattern/pattern"
   ],
-
-  "window": 
-  {
-  "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#ffee58",
-  "navigationBarTitleText": "睿择Wise Choose",
-  "navigationBarTextStyle": "black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffee58",
+    "navigationBarTitleText": "睿择Wise Choose",
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
-
 }
- 

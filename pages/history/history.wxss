@@ -1,0 +1,18 @@
+/* pages/history.wxss */
+#date{
+    background:#fff;
+    height: 571rpx;
+    width:90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.day{
+    width: 14%;
+    display:inline-block;
+    text-align: center;
+}
+.year_month{
+    text-align: center;
+}
