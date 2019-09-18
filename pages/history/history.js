@@ -11,6 +11,7 @@ Page({
       month:'',//当前月份
       nextMonth:[1,1,1,1,1,1,1,1,1,1,1,1], //随意值  只要length为12就完事
       index:0,//索引
+      weekDay:['一','二','三','四','五','六','日']
   },
 
   /**
@@ -81,15 +82,15 @@ Page({
   },
 
   intervalChange:function(e){ //滑动修改日期
-    if (e.detail.current - this.data.index == -1 ||e.detail.current - this.data.index == 11) { //回到初始位置向左滑动
+    if (e.detail.current - this.data.index == -1 || e.detail.current - this.data.index == 11) { //回到初始位置向左滑动
       this.setData({
-        year:this.data.month<2?this.data.year-1:this.data.year,
-        month:this.data.month<2?'12':this.data.month-1
+        year:this.data.month<2?Number(this.data.year)-1:this.data.year,
+        month:this.data.month<2?'12':Number(this.data.month)-1
        })
     } else if (e.detail.current - this.data.index == 1 || e.detail.current - this.data.index == -11) {//回到初始位置向右滑动
       this.setData({
-        year:this.data.month>11?this.data.year+1:this.data.year,
-        month:this.data.month>11?'1':this.data.month+1
+        year:this.data.month>11?Number(this.data.year)+1:this.data.year,
+        month:this.data.month>11?'1':Number(this.data.month)+1
        })
     }
     this.setData({
@@ -104,6 +105,20 @@ Page({
     })
     let getFullDay=common.getLastDay(fullYear,month)
     for (let i = 1; i <= getFullDay; i++) {
+        this.data.fullDay.push(i);
+    }
+    console.log(common.getFistWeek(this.data.year,this.data.month))
+    console.log(common.getLastDay(this.data.year,this.data.month,''))
+    let prevWeek=common.getFistWeek(this.data.year,this.data.month)==0?7:common.getFistWeek(this.data.year,this.data.month)
+    for (let i = 1; i <prevWeek ; i++) {
+        if (i==1) {
+          this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,''))
+        } else {
+          this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,'')-i)
+        }
+    }
+    let NextMonthDay=42-Number(this.data.fullDay.length)
+    for (let i = 1; i <= NextMonthDay;i++) {
         this.data.fullDay.push(i);
     }
     this.setData({
