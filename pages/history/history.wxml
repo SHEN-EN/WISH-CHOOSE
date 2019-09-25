@@ -10,7 +10,6 @@
             </swiper-item>
     </swiper>
      </view>
-<<<<<<< HEAD
      <view class="choose_head">
         <view>时间选择</view> 
         <view>已察觉</view> 
@@ -35,7 +34,5 @@
             </view>
         </view>
      </view>
-=======
->>>>>>> 36e383c06c3adb2ec1162c157350a58d6f95ddca
 </view>
   

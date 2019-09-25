@@ -25,12 +25,8 @@ Page({
       year:date.getFullYear(),
       month:date.getMonth() + 1
     })
-<<<<<<< HEAD
     this.updataDay(this.data.year,this.data.month);
     this.loadingList()
-=======
-    this.updataDay(this.data.year,this.data.month)
->>>>>>> 36e383c06c3adb2ec1162c157350a58d6f95ddca
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
