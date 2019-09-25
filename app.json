@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/pattern/pattern",
-    "pages/cards/cards",
-    "pages/result/result",
     "pages/history/history",
     "pages/home/home",
+    "pages/Awarenessdiary/Awarenessdiary",
+    "pages/cards/cards",
+    "pages/result/result",
     "pages/extract/extract",
     "pages/author/author",
-    "pages/Awarenessdiary/Awarenessdiary",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/pattern/pattern"
   ],
   "window": {
     "backgroundTextStyle": "light",
