@@ -1,39 +1,38 @@
 <!--pages/history.wxml-->
-
-<!-- my-component  自定义头部导航组件 -->
-<my-component my-property="{{title}}"></my-component>
 <wxs src="../../utils/util.wxs" module="util" />
 <view>
-	<!-- 日记列表 -->
-	<view>
-		<view class="header_choose" hover-class="none" hover-stop-propagation="false">
-
-		</view>
-		<view class="diary_list" hover-class="none" hover-stop-propagation="false">
-			
-		</view>
-	</view>
-
-
-
-
-	<!-- 觉察日记 - 日历组件 -->
     <view id="date">
-		<swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
-			<swiper-item wx:for="{{nextMonth}}" >
-				<view class="year_month" bindtap="changeYear">
-					<text class="cancel" selectable="false" space="false" decode="false">取消</text>
-					<view class="to_left" hover-class="none" hover-stop-propagation="false"></view>
-					<view class="to_left_translate" hover-class="none" hover-stop-propagation="false"></view>
-					{{year}}年{{month}}月 
-					<view class="to_right" hover-class="none" hover-stop-propagation="false"></view>
-					<view class="to_right_translate" hover-class="none" hover-stop-propagation="false"></view>
-					<text class="finish" selectable="false" space="false" decode="false">完成</text>
-				</view>
-				<text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
-				<text  wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
-			</swiper-item>
-		</swiper>
-	</view>
+    <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
+            <swiper-item wx:for="{{nextMonth}}" >
+               <view class="year_month" bindtap="changeYear">{{year}}/{{month}}</view>
+                    <text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
+                    <text wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
+            </swiper-item>
+    </swiper>
+     </view>
+     <view class="choose_head">
+        <view>时间选择</view> 
+        <view>已察觉</view> 
+        <view>未察觉</view> 
+        <view id="choose_head_to">选择操作</view> 
+     </view>
+     <view class="choose_content" wx:for="{{historyList}}" wx:key>
+        <view class="choose_content_dateContent">
+            <view class="choose_content_date">
+               {{util.getDay(util.number(item.createTime))}}
+            </view>
+            <view class="choose_content_details">
+            <text>
+                {{util.jsonParse(item.imgJson)}}
+            </text>
+                <image class="choose_content_details_wenzi" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/WordCards/mmexport1567739818896.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+                <image class="choose_content_details_tuxiang" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/Cards/aa" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+            </view>
+        </view>
+     </view>
 </view>
   
