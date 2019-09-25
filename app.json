@@ -2,7 +2,6 @@
   "pages": [
     "pages/history/history",
     "pages/my/my",
-    "pages/home/home",
     "pages/Awarenessdiary/Awarenessdiary",
     "pages/home/home",
     "pages/cards/cards",
