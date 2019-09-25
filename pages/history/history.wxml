@@ -1,4 +1,5 @@
 <!--pages/history.wxml-->
+
 <!-- my-component  自定义头部导航组件 -->
 <my-component my-property="{{title}}"></my-component>
 <view>
