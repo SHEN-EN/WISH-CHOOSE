@@ -7,6 +7,9 @@
     <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
       <view class="swiper-item" bindtap="toExtract">
         <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}" ></image>
+        <view class="soloLogo" hover-class="none" hover-stop-propagation="false">
+          <image class="soloLogo_img" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/pattern/solodog.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </view>
       </view>
     </swiper-item>
   </swiper>
