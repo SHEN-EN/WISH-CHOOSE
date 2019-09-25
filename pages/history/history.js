@@ -18,7 +18,9 @@ Page({
       "color": "#000",
       "flag": 1,
       "name": "我的觉察"
-      }
+      },
+      pageNo:0,
+      historyList:''
   },
 
   /**
@@ -30,7 +32,8 @@ Page({
       year:date.getFullYear(),
       month:date.getMonth() + 1
     })
-    this.updataDay(this.data.year,this.data.month)
+    this.updataDay(this.data.year,this.data.month);
+    this.loadingList()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -64,9 +67,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
-
   /**
    * 页面上拉触底事件的处理函数
    */
@@ -132,4 +134,22 @@ Page({
       fullDay:this.data.fullDay
     })
   },
+  loadingList:function(){
+    let that=this
+    wx.request({
+      url: 'http://129.204.154.119:5555/api/storyList',
+      data: {
+        openid:wx.getStorageSync('openid'),
+        pageNo:this.data.pageNo
+      },
+      method: 'post', 
+      success: function(res){
+        let arr=[...res.data.query];
+        console.log(arr)        
+        that.setData({
+          historyList:arr
+        })
+      }
+    })
+  }
 })

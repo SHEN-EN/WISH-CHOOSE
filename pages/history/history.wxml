@@ -2,6 +2,7 @@
 
 <!-- my-component  自定义头部导航组件 -->
 <my-component my-property="{{title}}"></my-component>
+<wxs src="../../utils/util.wxs" module="util" />
 <view>
 	<!-- 日记列表 -->
 	<view>

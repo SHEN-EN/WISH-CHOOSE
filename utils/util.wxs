@@ -1,0 +1,18 @@
+function getDay(timeStamp){
+    var d=getDate(timeStamp);
+    var M=d.getMonth()+1;
+    var D=d.getDate()<10?"0" + d.getMonth()+1:d.getDate()
+    return M +'.'+ D;
+}
+function jsonParse(params){
+    var  value=JSON.stringify(params);
+    return  JSON.parse(value)
+}
+function number(value){
+    return Number(value)
+}
+ module.exports ={
+    getDay:getDay,
+    jsonParse:jsonParse,
+    number:number,
+}
