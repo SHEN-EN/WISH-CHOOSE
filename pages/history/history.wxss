@@ -26,7 +26,8 @@
     top: 50%;
     transform: translate(-50%,-50%);
     border-radius: 35rpx;
-    display: none;
+    z-index: 999;
+    /* display: none; */
 }
 .day{
     width: 14%;

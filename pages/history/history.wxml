@@ -1,14 +1,23 @@
 <!--pages/history.wxml-->
+<my-component my-property="{{title}}"></my-component>
 <wxs src="../../utils/util.wxs" module="util" />
 <view>
     <view id="date">
     <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
-            <swiper-item wx:for="{{nextMonth}}" >
-               <view class="year_month" bindtap="changeYear">{{year}}/{{month}}</view>
-                    <text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
-                    <text wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
-            </swiper-item>
-    </swiper>
+			<swiper-item wx:for="{{nextMonth}}" >
+				<view class="year_month" bindtap="changeYear">
+					<text class="cancel" selectable="false" space="false" decode="false">取消</text>
+					<view class="to_left" hover-class="none" hover-stop-propagation="false"></view>
+					<view class="to_left_translate" hover-class="none" hover-stop-propagation="false"></view>
+					{{year}}年{{month}}月 
+					<view class="to_right" hover-class="none" hover-stop-propagation="false"></view>
+					<view class="to_right_translate" hover-class="none" hover-stop-propagation="false"></view>
+					<text class="finish" selectable="false" space="false" decode="false">完成</text>
+				</view>
+				<text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
+				<text  wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
+			</swiper-item>
+		</swiper>
      </view>
      <view class="choose_head">
         <view>时间选择</view> 
