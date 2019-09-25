@@ -1,4 +1,5 @@
 // pages/history.js
+  
 var common = require('../../common/common.js')
 Page({
 
@@ -11,7 +12,13 @@ Page({
       month:'',//当前月份
       nextMonth:[1,1,1,1,1,1,1,1,1,1,1,1], //随意值  只要length为12就完事
       index:0,//索引
-      weekDay:['一','二','三','四','五','六','日']
+      weekDay:['一','二','三','四','五','六','日'],
+      title: {
+      "bg_color": "#fff",
+      "color": "#000",
+      "flag": 1,
+      "name": "我的觉察"
+      }
   },
 
   /**
@@ -88,7 +95,7 @@ Page({
         month:this.data.month<2?'12':Number(this.data.month)-1
        })
     } else if (e.detail.current - this.data.index == 1 || e.detail.current - this.data.index == -11) {//回到初始位置向右滑动
-      this.setData({
+      this.setData({  
         year:this.data.month>11?Number(this.data.year)+1:this.data.year,
         month:this.data.month>11?'1':Number(this.data.month)+1
        })
@@ -107,8 +114,8 @@ Page({
     for (let i = 1; i <= getFullDay; i++) {
         this.data.fullDay.push(i);
     }
-    console.log(common.getFistWeek(this.data.year,this.data.month))
-    console.log(common.getLastDay(this.data.year,this.data.month,''))
+    // console.log(common.getFistWeek(this.data.year,this.data.month))
+    // console.log(common.getLastDay(this.data.year,this.data.month,''))
     let prevWeek=common.getFistWeek(this.data.year,this.data.month)==0?7:common.getFistWeek(this.data.year,this.data.month)
     for (let i = 1; i <prevWeek ; i++) {
         if (i==1) {

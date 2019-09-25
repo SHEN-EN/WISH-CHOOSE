@@ -1,4 +1,22 @@
 /* pages/history.wxss */
+
+/* 
+  日记列表
+*/
+.header_choose{
+    width: 100%;
+    height: 100rpx;
+    background-color: #f2f2f2;
+}
+.diary_list{
+    width: 100%;
+    height: auto;
+    min-height: 1105rpx;
+    background-color: #fff;
+}
+/* 
+  日历插件
+*/
 #date{
     background:#fff;
     height: 571rpx;
@@ -7,12 +25,71 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    border-radius: 35rpx;
+    display: none;
 }
 .day{
     width: 14%;
     display:inline-block;
     text-align: center;
+    line-height: 65rpx
 }
 .year_month{
+    font-size: 37rpx;
+    height: 80rpx;
     text-align: center;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.cancel{
+    float: left;
+    margin-left: 30rpx;
+    color: #989898;
+    font-size: 34rpx;
+}
+.finish{
+    float: right;
+    margin-right: 30rpx;
+    color: #35a7ff;
+    font-size: 34rpx;
+}
+.to_left{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 20rpx;
+    left: 175rpx;
+    border-right: 18rpx solid #333333;
+    border-top: 18rpx solid transparent;
+    border-bottom: 18rpx solid transparent;
+}
+.to_left_translate{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 20rpx;
+    left: 177rpx;
+    border-right: 18rpx solid #fff;
+    border-top: 18rpx solid transparent;
+    border-bottom: 18rpx solid transparent;
+}
+.to_right{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 20rpx;
+    right: 177rpx;
+    border-left: 18rpx solid #333;
+    border-top: 18rpx solid transparent;
+    border-bottom: 18rpx solid transparent;
+}
+.to_right_translate{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 20rpx;
+    right: 179rpx;
+    border-left: 18rpx solid #fff;
+    border-top: 18rpx solid transparent;
+    border-bottom: 18rpx solid transparent;
 }

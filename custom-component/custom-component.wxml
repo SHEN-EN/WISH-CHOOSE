@@ -1,0 +1,15 @@
+<!-- 组件 custom-component.wxml -->
+<custom-component>
+  <view class='flex commonHead' style='color:{{myProperty.color?myProperty.color:"#000"}};background-color:{{myProperty.bg_color?myProperty.bg_color:"white"}};height:{{commonHeadHeight.titleHeight}}px;'>
+    <view class='commonHead-wrap flex'>
+    <!-- 0:无返回；1：返回上一级；2：home -->
+      <view class='commonHead_left'>
+        <view wx:if="{{myProperty.flag==1}}" class='commonHead_left_back' bindtap='commonHead_left_back'></view>
+        <view wx:if="{{myProperty.flag==2}}" class='commonHead_left_home' bindtap='commonHead_left_home'></view>
+      </view>
+      <view class='commonHead_right flex'>
+        <view class='commonHead_right_text line1'>{{myProperty.name?myProperty.name:"我是标题"}}</view>
+      </view>
+    </view>
+  </view>
+</custom-component>
