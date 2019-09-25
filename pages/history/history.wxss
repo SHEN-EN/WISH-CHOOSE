@@ -1,4 +1,7 @@
 /* pages/history.wxss */
+page{
+    background: #fff;
+}
 #date{
     background:#fff;
     height: 571rpx;
@@ -15,4 +18,70 @@
 }
 .year_month{
     text-align: center;
+}
+.choose_head{
+    height: 82rpx;
+    background: #f2f2f2;
+}
+.choose_head view{
+    width: 23%;
+    display: inline-block;
+    border:  #d8d8d8 solid 1rpx;
+    margin-left: 2%;
+    border-radius: 20rpx;
+    text-align: center;
+    margin-top: 3%;
+    color: #656565;
+}
+.choose_head :last-child{
+    border: none;
+}
+.choose_content_dateContent{
+    margin-top: 30rpx;
+}
+.choose_content_dateContent .choose_content_date{
+    width: 15%;
+    height: 200rpx;
+    float: left;
+    text-align: center;
+    line-height: 6;
+    font-size: 33rpx;
+    color: #282828;
+
+}
+.choose_content_dateContent .choose_content_details{
+    height: 200rpx;
+    background: #fff;
+    box-shadow:0px 0px 13rpx #e4e5e4;
+    width: 80%;
+    float: left;
+}
+.choose_content_dateContent .choose_content_details text{
+    font-size: 20rpx;
+    color: #989898;
+    line-height: 38rpx;
+    width: 75%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    margin: -15rpx 0 0 15rpx;
+    box-sizing: border-box;
+    float: left;
+}
+.choose_content_dateContent .choose_content_details .choose_content_details_wenzi{
+    width: 18%;
+    height: 147rpx;
+    float: left;
+    margin: 20rpx 0 0 10rpx;
+}
+.choose_content_dateContent .choose_content_details .choose_content_details_tuxiang{
+    width: 13%;
+    height: 115rpx;
+    margin: 20rpx 0 0 27rpx;
+    position: relative;
+    top: -150rpx;
+}
+.choose_content{
+    height: 209rpx;
 }

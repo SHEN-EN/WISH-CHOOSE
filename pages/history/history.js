@@ -23,7 +23,18 @@ Page({
       year:date.getFullYear(),
       month:date.getMonth() + 1
     })
-    this.updataDay(this.data.year,this.data.month)
+    this.updataDay(this.data.year,this.data.month);
+      wx.request({
+        url: 'http://129.204.154.119:5555/api/storyList',
+        data: {
+          openid:wx.getStorageSync('openid'),
+          pageNo:0
+        },
+        method: 'post', 
+        success: function(res){
+          // success
+        }
+      })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -89,7 +100,7 @@ Page({
        })
     } else if (e.detail.current - this.data.index == 1 || e.detail.current - this.data.index == -11) {//回到初始位置向右滑动
       this.setData({
-        year:this.data.month>11?Number(this.data.year)+1:this.data.year,
+        year:this.data.month>11?Number(this.data.year)+1:this.data.year,                                    
         month:this.data.month>11?'1':Number(this.data.month)+1
        })
     }
@@ -107,8 +118,6 @@ Page({
     for (let i = 1; i <= getFullDay; i++) {
         this.data.fullDay.push(i);
     }
-    console.log(common.getFistWeek(this.data.year,this.data.month))
-    console.log(common.getLastDay(this.data.year,this.data.month,''))
     let prevWeek=common.getFistWeek(this.data.year,this.data.month)==0?7:common.getFistWeek(this.data.year,this.data.month)
     for (let i = 1; i <prevWeek ; i++) {
         if (i==1) {

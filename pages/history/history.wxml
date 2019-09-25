@@ -1,13 +1,99 @@
 <!--pages/history.wxml-->
 <view>
-    <view id="date">
+    <view id="date"  wx:if="{{false}}">
     <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
-            <swiper-item wx:for="{{nextMonth}}" >
+            <swiper-item wx:for="{{nextMonth}}" wx:key>
                <view class="year_month" bindtap="changeYear">{{year}}/{{month}}</view>
-                    <text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
-                    <text wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
+                    <view class="day" wx:for="{{weekDay}}" wx:key>{{item}}</view>
+                    <view wx:for="{{fullDay}}" wx:key class="day">{{item}}</view>
             </swiper-item>
     </swiper>
+     </view>
+     <view class="choose_head">
+        <view>时间选择</view> 
+        <view>已察觉</view> 
+        <view>未察觉</view> 
+        <view id="choose_head_to">选择操作</view> 
+     </view>
+     <view class="choose_content">
+        <view class="choose_content_dateContent">
+            <view class="choose_content_date">
+                9.04
+            </view>
+            <view class="choose_content_details">
+            <text>
+                今日觉察：在这张图片中，我看到了一个人拿着一把剪刀他似乎在剪一卷柔软的布，
+                但从文字我感受到了这把剪刀的‘危险’；我
+                想到了这个人剪完布之后是否会再去伤......
+            </text>
+                <image class="choose_content_details_wenzi" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/WordCards/mmexport1567739818896.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+                <image class="choose_content_details_tuxiang" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/Cards/aa" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+            </view>
+        </view>
+     </view>
+      <view class="choose_content">
+        <view class="choose_content_dateContent">
+            <view class="choose_content_date">
+                9.04
+            </view>
+            <view class="choose_content_details">
+            <text>
+                今日觉察：在这张图片中，我看到了一个人拿着一把剪刀他似乎在剪一卷柔软的布，
+                但从文字我感受到了这把剪刀的‘危险’；我
+                想到了这个人剪完布之后是否会再去伤......
+            </text>
+                <image class="choose_content_details_wenzi" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/WordCards/mmexport1567739818896.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+                <image class="choose_content_details_tuxiang" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/Cards/aa" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+            </view>
+        </view>
+     </view>
+      <view class="choose_content">
+        <view class="choose_content_dateContent">
+            <view class="choose_content_date">
+                9.04
+            </view>
+            <view class="choose_content_details">
+            <text>
+                今日觉察：在这张图片中，我看到了一个人拿着一把剪刀他似乎在剪一卷柔软的布，
+                但从文字我感受到了这把剪刀的‘危险’；我
+                想到了这个人剪完布之后是否会再去伤......
+            </text>
+                <image class="choose_content_details_wenzi" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/WordCards/mmexport1567739818896.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+                <image class="choose_content_details_tuxiang" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/Cards/aa" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+            </view>
+        </view>
+     </view>
+      <view class="choose_content">
+        <view class="choose_content_dateContent">
+            <view class="choose_content_date">
+                9.04
+            </view>
+            <view class="choose_content_details">
+            <text>
+                今日觉察：在这张图片中，我看到了一个人拿着一把剪刀他似乎在剪一卷柔软的布，
+                但从文字我感受到了这把剪刀的‘危险’；我
+                想到了这个人剪完布之后是否会再去伤......
+            </text>
+                <image class="choose_content_details_wenzi" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/WordCards/mmexport1567739818896.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+                <image class="choose_content_details_tuxiang" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/Cards/aa" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                        
+                </image>
+            </view>
+        </view>
      </view>
 </view>
   
