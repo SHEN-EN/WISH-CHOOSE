@@ -4,6 +4,7 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
+    loadModal:false
   },
   onLoad: function() {
     if (app.globalData.userInfo) {
@@ -25,10 +26,8 @@ Page({
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
     if (e.detail.errMsg == "getUserInfo:ok") { //同意授权
-      wx.showToast({
-        title: '授权中',
-        icon: 'loading',
-        duration: 2000
+      this.setData({
+        loadModal: true
       })
       wx.login({ //去请求接口获取sesseionid
         success: res => {
@@ -56,6 +55,9 @@ Page({
                         key: 'userInfo',
                         data: res.userInfo
                       });
+                      this.setData({
+                          loadModal: false
+                      })
                       if (result.data.code == 200) {
                         this.setData({
                           userInfo: e.detail.userInfo,

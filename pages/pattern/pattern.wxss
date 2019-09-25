@@ -34,3 +34,20 @@ swiper {
   height: 35rpx;
   margin-left: 20rpx
 }
+
+.soloLogo{
+  width: 610rpx;
+  height: 80rpx;
+  background-color: #24454f;
+  position: absolute;
+  top: 848rpx;
+  border-radius: 0px 0px 5px 5px;  
+}
+
+.soloLogo_img{
+  width: 200rpx !important;
+  height: 53rpx !important;
+  position: absolute;
+  top: 10rpx;
+  left: 200rpx;
+}

@@ -25,8 +25,12 @@ Page({
       year:date.getFullYear(),
       month:date.getMonth() + 1
     })
+<<<<<<< HEAD
     this.updataDay(this.data.year,this.data.month);
     this.loadingList()
+=======
+    this.updataDay(this.data.year,this.data.month)
+>>>>>>> 36e383c06c3adb2ec1162c157350a58d6f95ddca
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -91,7 +95,7 @@ Page({
        })
     } else if (e.detail.current - this.data.index == 1 || e.detail.current - this.data.index == -11) {//回到初始位置向右滑动
       this.setData({
-        year:this.data.month>11?Number(this.data.year)+1:this.data.year,                                    
+        year:this.data.month>11?Number(this.data.year)+1:this.data.year,
         month:this.data.month>11?'1':Number(this.data.month)+1
        })
     }
@@ -109,6 +113,8 @@ Page({
     for (let i = 1; i <= getFullDay; i++) {
         this.data.fullDay.push(i);
     }
+    console.log(common.getFistWeek(this.data.year,this.data.month))
+    console.log(common.getLastDay(this.data.year,this.data.month,''))
     let prevWeek=common.getFistWeek(this.data.year,this.data.month)==0?7:common.getFistWeek(this.data.year,this.data.month)
     for (let i = 1; i <prevWeek ; i++) {
         if (i==1) {

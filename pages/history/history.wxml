@@ -1,15 +1,16 @@
 <!--pages/history.wxml-->
 <wxs src="../../utils/util.wxs" module="util" />
 <view>
-    <view id="date"  wx:if="{{false}}">
+    <view id="date">
     <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
-            <swiper-item wx:for="{{nextMonth}}" wx:key>
+            <swiper-item wx:for="{{nextMonth}}" >
                <view class="year_month" bindtap="changeYear">{{year}}/{{month}}</view>
-                    <view class="day" wx:for="{{weekDay}}" wx:key>{{item}}</view>
-                    <view wx:for="{{fullDay}}" wx:key class="day">{{item}}</view>
+                    <text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
+                    <text wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
             </swiper-item>
     </swiper>
      </view>
+<<<<<<< HEAD
      <view class="choose_head">
         <view>时间选择</view> 
         <view>已察觉</view> 
@@ -34,5 +35,7 @@
             </view>
         </view>
      </view>
+=======
+>>>>>>> 36e383c06c3adb2ec1162c157350a58d6f95ddca
 </view>
   

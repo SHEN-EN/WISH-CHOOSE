@@ -1,7 +1,4 @@
 /* pages/history.wxss */
-page{
-    background: #fff;
-}
 #date{
     background:#fff;
     height: 571rpx;
