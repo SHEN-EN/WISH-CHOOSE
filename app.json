@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/history/history",
-    "pages/home/home",
     "pages/Awarenessdiary/Awarenessdiary",
+    "pages/home/home",
     "pages/cards/cards",
     "pages/result/result",
     "pages/extract/extract",

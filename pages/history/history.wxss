@@ -55,6 +55,7 @@ page{
     box-shadow:0px 0px 13rpx #e4e5e4;
     width: 80%;
     float: left;
+    position: relative;
 }
 .choose_content_dateContent .choose_content_details text{
     font-size: 20rpx;
@@ -74,13 +75,16 @@ page{
     height: 147rpx;
     float: left;
     margin: 20rpx 0 0 10rpx;
+    position: absolute;
+    left: 77%;
 }
 .choose_content_dateContent .choose_content_details .choose_content_details_tuxiang{
     width: 13%;
     height: 115rpx;
     margin: 20rpx 0 0 27rpx;
-    position: relative;
-    top: -150rpx;
+    position: absolute;
+    top: 19rpx;
+    left: 77%;
 }
 .choose_content{
     height: 209rpx;
