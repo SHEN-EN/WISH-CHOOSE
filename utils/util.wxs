@@ -5,8 +5,7 @@ function getDay(timeStamp){
     return M +'.'+ D;
 }
 function jsonParse(params){
-    var  value=JSON.stringify(params);
-    return  JSON.parse(value)
+    return  JSON.parse(params)
 }
 function number(value){
     return Number(value)
@@ -14,5 +13,5 @@ function number(value){
  module.exports ={
     getDay:getDay,
     jsonParse:jsonParse,
-    number:number,
+    number:number
 }

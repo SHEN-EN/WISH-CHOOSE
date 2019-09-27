@@ -2,46 +2,56 @@
 <my-component my-property="{{title}}"></my-component>
 <wxs src="../../utils/util.wxs" module="util" />
 <view>
-    <view id="date">
+    <view class="mark {{class!==''?'markBlok':''}}"></view>
+    <view class="date {{class}}">
     <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
 			<swiper-item wx:for="{{nextMonth}}" >
-				<view class="year_month" bindtap="changeYear">
-					<text class="cancel" selectable="false" space="false" decode="false">取消</text>
+				<view class="year_month">
+					<text class="cancel" selectable="false" space="false" decode="false" bindtap="toDisplay">取消</text>
 					<view class="to_left" hover-class="none" hover-stop-propagation="false"></view>
-					<view class="to_left_translate" hover-class="none" hover-stop-propagation="false"></view>
+					<view class="to_left_translate" hover-class="none" hover-stop-propagation="false" bindtap="changeYear" data-direction='left'></view>
 					{{year}}年{{month}}月 
 					<view class="to_right" hover-class="none" hover-stop-propagation="false"></view>
-					<view class="to_right_translate" hover-class="none" hover-stop-propagation="false"></view>
-					<text class="finish" selectable="false" space="false" decode="false">完成</text>
+					<view class="to_right_translate" hover-class="none" hover-stop-propagation="false"  bindtap="changeYear" data-direction='right'></view>
+					<text class="finish" selectable="false" space="false" decode="false" bindtap="toshow">完成</text>
 				</view>
-				<text class="day" wx:for="{{weekDay}}" wx:key>{{item}}</text>
-				<text  wx:for="{{fullDay}}" wx:key class="day">{{item}}</text>
+				<view class="day" wx:for="{{weekDay}}" wx:key>{{item}}</view>
+				<view  wx:for="{{fullDay}}" wx:key class="day days {{item==selectId?'selected':''}} round" bindtap="selectDay" data-day="{{item}}">{{item}}</view>
 			</swiper-item>
 		</swiper>
      </view>
-     <view class="choose_head">
-        <view>时间选择</view> 
-        <view>已察觉</view> 
-        <view>未察觉</view> 
-        <view id="choose_head_to">选择操作</view> 
+     <view class="choose_head" bindtap="eventAgent">
+        <view data-event='time' class="{{class!=''?'Selected':''}}">{{selectId==''?'时间选择': year +'-'+ month +'-'+ selectId}}</view> 
+        <view data-event='isEdit'>已察觉</view> 
+        <view data-event='noEdit'>未察觉</view> 
+        <view data-event='delete' id="choose_head_to" >{{toDelete?'取消选择':'选择操作'}}</view> 
      </view>
-     <view class="choose_content" wx:for="{{historyList}}" wx:key>
+     <view class="choose_content" wx:for="{{historyList}}">
         <view class="choose_content_dateContent">
-            <view class="choose_content_date">
+            <view class="choose_content_date" wx:if="{{!toDelete}}">
                {{util.getDay(util.number(item.createTime))}}
             </view>
-            <view class="choose_content_details">
+            <view class="choose_content_details" style="{{toDelete?'margin-left:5%':''}}">
             <text>
-                {{util.jsonParse(item.imgJson)}}
+                {{util.jsonParse(item.imgJson)[0].storyValue}}
             </text>
-                <image class="choose_content_details_wenzi" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/WordCards/mmexport1567739818896.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                <image class="choose_content_details_wenzi" src="{{util.jsonParse(item.imgJson)[0].imgTextCar}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
                         
                 </image>
-                <image class="choose_content_details_tuxiang" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/ps_text/Cards/aa" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
+                <image class="choose_content_details_tuxiang" src="{{util.jsonParse(item.imgJson)[0].imgCar}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false">
                         
                 </image>
             </view>
         </view>
+        <checkbox-group bindchange="checkboxChange" class="checkbox">
+        <checkbox  value="{{item.id}}" color="red" wx:if="{{toDelete}}">
+            
+        </checkbox>
+        </checkbox-group> 
+     </view>
+     <view class="delete" style='{{toDelete?"transform: translate(0,0);":""}}'>
+         <image class="" src="../image/delete.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""  bindtap="deleteById"/>
+           <text>删除</text>
      </view>
 </view>
   
