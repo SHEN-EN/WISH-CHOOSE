@@ -1,12 +1,11 @@
-<!--pages/my.wxml-->
+<!-- pages/my.wxml -->
+<my-component my-property="{{title}}"></my-component>
 <view class="my">
   <view class="my_header">
     <view class="my_header_top">
       <image src="{{headerImg}}" class="my_header_img"></image>
       <text class="my_header_nickName">你好,{{nickName}}</text>
-      <text class="my_header_text">
-                您已连续觉察7天（今日还未觉察）
-            </text>
+      <text class="my_header_text">您已连续觉察7天（今日还未觉察）</text>
     </view>
   </view>
   <view class="my_body">

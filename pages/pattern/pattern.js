@@ -19,6 +19,12 @@ Page({
       type: 'image',
         url: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/pattern/pattern.png'
     }],
+    title: {
+      "bg_color": "#fff",
+      "color": "#333",
+      "flag": 1,
+      "name": ""
+    }
   },
 
   /**

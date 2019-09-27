@@ -1,4 +1,5 @@
 <!--pages/result/result.wxml-->
+<my-component my-property="{{title}}"></my-component>
 <view class="DrawResult">
   <view class="Image" hover-class="none" hover-stop-propagation="false">
     <view >

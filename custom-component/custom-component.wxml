@@ -8,7 +8,7 @@
         <view wx:if="{{myProperty.flag==2}}" class='commonHead_left_home' bindtap='commonHead_left_home'></view>
       </view>
       <view class='commonHead_right flex'>
-        <view class='commonHead_right_text line1'>{{myProperty.name?myProperty.name:"我是标题"}}</view>
+        <view class='commonHead_right_text line1'>{{myProperty.name?myProperty.name:""}}</view>
       </view>
     </view>
   </view>
