@@ -8,6 +8,11 @@ Page({
     home: false,
     headerImg: '',
     nickName: '',
+    title: {
+      "bg_color": "#ffea2e",
+      "color": "#333",
+      "name": "Wise Choose"
+    }
   },
 
   /**

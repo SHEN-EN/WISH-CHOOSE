@@ -7,6 +7,11 @@ Page({
   data: {
     Cards:'',
     wordCards:'',
+    title: {
+      "bg_color": "#fff",
+      "flag": 1,
+      "name": ""
+    }
   },
 
   /**

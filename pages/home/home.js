@@ -54,7 +54,12 @@ Page({
       type: 'image',
         url: 'https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/home/hotProp-4.png'
     }],
-    home: true
+	home: true,
+	title:{
+		"bg_color": "#ffea2e",
+    "color": "#333",
+		"name": "Wise Choose"
+	}
   },
 
   /**

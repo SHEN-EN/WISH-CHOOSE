@@ -4,10 +4,10 @@ Component({
       myProperty: {
         type: Object,
         value: {
-          "bg_color": "white",
+          "bg_color": "#ffea2e",
           "color": "#000",
-          "flag": 1,
-          "name": "我是标题"
+          "flag": 2,
+          "name": "Wise Choose"
         }
       },
       commonHeadHeight: {
