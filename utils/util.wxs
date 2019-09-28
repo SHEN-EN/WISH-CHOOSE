@@ -10,8 +10,22 @@ function jsonParse(params){
 function number(value){
     return Number(value)
 }
+function split(value){
+    var params=value.toString()
+    return params.split('-')[1]
+}
+function style(value,index,nextDay){  //value :prev index:list INDEX   nextDay:下个月的总天数
+    if(index<value || index>=42-nextDay){
+        return 'color:#989898'
+    }else{
+        return ''
+    }
+
+}
  module.exports ={
     getDay:getDay,
     jsonParse:jsonParse,
-    number:number
+    number:number,
+    split:split,
+    style:style
 }

@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      fullDay:[],//当月的天数
+      fullDay:[],//当月的天数要显示的天数
       year:'',//当前年份
       month:'',//当前月份
       nextMonth:[1,1,1,1,1,1,1,1,1,1,1,1], //随意值  只要length为12就完事
@@ -25,6 +25,8 @@ Page({
       selectId:'',//选中的id 天
       toDelete:false, //默认不显示删除
       deleteList:[],
+      prevWeek:'', //上个月的天数
+      nextWeek:'', //下一个月的天数
   },
 
   /**
@@ -121,7 +123,7 @@ Page({
    */
 
   updataDay:function(fullYear,month){
-
+    let onthisDay=[]//当月的天数
     this.setData({
       fullDay:[]
     })
@@ -129,26 +131,47 @@ Page({
     let getFullDay=common.getLastDay(fullYear,month)
     for (let i = 1; i <= getFullDay; i++) {
         this.data.fullDay.push(i);
+        onthisDay.push(i)
     }
-    let prevWeek=common.getLastWeek(this.data.year,this.data.month)==0?7:common.getLastWeek(this.data.year,this.data.month) //因为周日为0所以重写7
-    for (let j = 1; j <prevWeek ; j++) {
+    
+    this.setData({
+      prevWeek:common.getLastWeek(this.data.year,this.data.month) 
+    })
+    let prev=this.data.prevWeek=='1'?'2':this.data.prevWeek
+    for (let j = 1; j < prev; j++) {
+        onthisDay.unshift('')
         if (j==1) {
-          this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,''))  //插入本身
-          this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,'')-j) //插入本身-1的天数
+          if (prev=='2') {
+            this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,''))  //插入本身
+          }else{
+            onthisDay.unshift('')
+            this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,''))  //插入本身
+            this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,'')-j) //插入本身-1的天数
+          }
         } else {
           this.data.fullDay.unshift(common.getLastDay(this.data.year,this.data.month,'')-j)
         }
     }
-
     let NextMonthDay=42-Number(this.data.fullDay.length)
-
+    this.setData({
+        nextWeek:NextMonthDay
+    })
     for (let i = 1; i <= NextMonthDay;i++) {
+        onthisDay.push('')
         this.data.fullDay.push(i);
     }
-
-    this.setData({
-      fullDay:this.data.fullDay
-    })
+    if (arguments[2]) { //选择的 日期
+      var argFirst=arguments[2].split('-')[1]
+      this.setData({
+        fullDay:this.data.fullDay,
+        selectId:onthisDay.indexOf(Number(argFirst))+'-'+String(argFirst)
+      })
+      console.log(this.data.selectId)
+    }else{
+      this.setData({
+        fullDay:this.data.fullDay,
+      })
+    }
   },
   loadingList:function(){ //加载list
     let that=this
@@ -173,7 +196,7 @@ Page({
     this.setData({
       year:date.getFullYear(),
       month:date.getMonth() + 1,
-      selectId:date.getDate()+(common.getLastWeek(this.data.year,this.data.month)==0?7:common.getLastWeek(this.data.year,this.data.month))
+      selectId:(date.getDate()+common.getLastWeek(date.getFullYear(),date.getMonth()+1)-1)+'-'+date.getDate()
     })
     this.updataDay(this.data.year,this.data.month);
       this.setData({
@@ -194,10 +217,29 @@ Page({
     })
   },
   selectDay:function(e){ //选择日期天数
-    console.log(e)
-    this.setData({
-      selectId:e.currentTarget.dataset.day
-    })
+    let spiltDay=String(e.currentTarget.dataset.day).split('-');
+    let Month='';
+    if (Number(spiltDay[0])<this.data.prevWeek) { //上个月
+       Month=this.data.month-1;
+       this.setData({
+        selectId:e.currentTarget.dataset.day,
+        month:Month
+      })
+      this.updataDay(this.data.year,this.data.month,e.currentTarget.dataset.day)
+    }else if ((this.data.fullDay.length-this.data.nextWeek)<=Number(spiltDay[0])) { //下个月
+        Month=this.data.month+1;
+        this.setData({
+          selectId:e.currentTarget.dataset.day,
+          month:Month
+        })
+        this.updataDay(this.data.year,this.data.month,e.currentTarget.dataset.day)
+    }else{
+      Month=this.data.month;
+      this.setData({
+        selectId:e.currentTarget.dataset.day,
+        month:Month
+      })
+    }
   },
   eventAgent(e){ //事件代理
     switch (e.target.dataset.event) {

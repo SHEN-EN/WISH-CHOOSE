@@ -16,12 +16,12 @@
 					<text class="finish" selectable="false" space="false" decode="false" bindtap="toshow">完成</text>
 				</view>
 				<view class="day" wx:for="{{weekDay}}" wx:key>{{item}}</view>
-				<view  wx:for="{{fullDay}}" wx:key class="day days {{index==selectId?'selected':''}} round" bindtap="selectDay" data-day="{{index}}">{{item}}</view>
+				<view  wx:for="{{fullDay}}" wx:key class="day days {{index+'-'+item==selectId?'selected':''}} round" bindtap="selectDay" data-day="{{index+'-'+item}}" style="{{util.style(prevWeek,index,nextWeek)}}">{{item}}</view>
 			</swiper-item>
 		</swiper>
      </view>
      <view class="choose_head" bindtap="eventAgent">
-        <view data-event='time' class="{{class!=''?'Selected':''}}">{{selectId==''?'时间选择': year +'-'+ month +'-'+ selectId}}</view> 
+        <view data-event='time' class="{{class!=''?'Selected':''}}">{{selectId==''?'时间选择': year +'-'+ month +'-'+ util.split(selectId)}}</view> 
         <view data-event='isEdit'>已察觉</view> 
         <view data-event='noEdit'>未察觉</view> 
         <view data-event='delete' id="choose_head_to" >{{toDelete?'取消选择':'选择操作'}}</view> 
