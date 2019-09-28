@@ -173,7 +173,7 @@ Page({
     this.setData({
       year:date.getFullYear(),
       month:date.getMonth() + 1,
-      selectId:date.getDate()
+      selectId:date.getDate()+(common.getLastWeek(this.data.year,this.data.month)==0?7:common.getLastWeek(this.data.year,this.data.month))
     })
     this.updataDay(this.data.year,this.data.month);
       this.setData({
@@ -194,6 +194,7 @@ Page({
     })
   },
   selectDay:function(e){ //选择日期天数
+    console.log(e)
     this.setData({
       selectId:e.currentTarget.dataset.day
     })
@@ -231,8 +232,15 @@ Page({
       })
   },
   deleteById:function () {
+    if (this.data.deleteList) {
+      wx.showToast({
+        title: '请选择要删除的项目',
+        icon: 'none',
+        duration: 1000
+      })
+    }else{
       wx.request({
-        url: 'http://10.3.13.32:5555/api/deleteListById',
+        url: 'http://129.204.154.119:5555/api/deleteListById',
         data: {
           id:this.data.deleteList
         },
@@ -253,6 +261,9 @@ Page({
           }
         },
       })
-
+    }
+  },
+  toDetail:function (e) {
+      console.log(e)
   }
 })

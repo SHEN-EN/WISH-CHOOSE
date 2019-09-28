@@ -38,7 +38,6 @@ page {
   float: left;
   margin-left: 20rpx;
   font-size: 22rpx;
-  margin-top: -13rpx;
   width: 60%;
 }
 

@@ -16,7 +16,7 @@
 					<text class="finish" selectable="false" space="false" decode="false" bindtap="toshow">完成</text>
 				</view>
 				<view class="day" wx:for="{{weekDay}}" wx:key>{{item}}</view>
-				<view  wx:for="{{fullDay}}" wx:key class="day days {{item==selectId?'selected':''}} round" bindtap="selectDay" data-day="{{item}}">{{item}}</view>
+				<view  wx:for="{{fullDay}}" wx:key class="day days {{index==selectId?'selected':''}} round" bindtap="selectDay" data-day="{{index}}">{{item}}</view>
 			</swiper-item>
 		</swiper>
      </view>
@@ -31,7 +31,7 @@
             <view class="choose_content_date" wx:if="{{!toDelete}}">
                {{util.getDay(util.number(item.createTime))}}
             </view>
-            <view class="choose_content_details" style="{{toDelete?'margin-left:5%':''}}">
+            <view class="choose_content_details" style="{{toDelete?'margin-left:5%':''}}" bindtap="toDetail" data-id="{{item.id}}">
             <text>
                 {{util.jsonParse(item.imgJson)[0].storyValue}}
             </text>
