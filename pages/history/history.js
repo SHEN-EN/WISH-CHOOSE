@@ -20,7 +20,7 @@ Page({
       "name": "我的觉察"
       },
       pageNo:0,
-      historyList:'',
+      historyList:[],
       class:'',//显示日历样式
       selectId:'',//选中的id 天
       toDelete:false, //默认不显示删除
@@ -72,15 +72,18 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
+  onReachBottom: function (e) {
+    this.setData({
+      pageNo:this.data.pageNo+5
+    })
+    this.loadingList()
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+     
   },
 
   changeYear:function(e){ //切换日期
@@ -180,11 +183,14 @@ Page({
       data: {
         openid:wx.getStorageSync('openid'),
         pageNo:this.data.pageNo,
-        edit:arguments[0]==undefined?'':arguments[0]
+        edit:arguments[0]==undefined?'':arguments[0],
+        startTime:arguments[1]==undefined?'':arguments[1],
+        endtTime:arguments[2]==undefined?'':arguments[2],
       },
       method: 'post', 
       success: function(res){
-        let arr=[...res.data.query];     
+        let arr=[...res.data.query];
+        arr.push(...that.data.historyList)
         that.setData({
           historyList:arr
         })
@@ -214,7 +220,8 @@ Page({
   toshow:function(){  //选择日期完成
     this.setData({
       class:''
-    })
+    });
+    this.loadingList('',+new Date(`${this.data.year}-${this.data.month}-${this.data.selectId.split('-')[1]}`),+new Date(`${this.data.year}-${this.data.month}-${Number(this.data.selectId.split('-')[1])+1}`)-1)
   },
   selectDay:function(e){ //选择日期天数
     let spiltDay=String(e.currentTarget.dataset.day).split('-');
@@ -244,7 +251,10 @@ Page({
   eventAgent(e){ //事件代理
     switch (e.target.dataset.event) {
       case 'time':
-          this.toSelectTime()
+          this.setData({
+            historyList:''
+          })
+          this.toSelectTime();
         break;
       case 'isEdit':
         this.setData({
