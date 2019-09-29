@@ -2,7 +2,7 @@
 <my-component my-property="{{title}}"></my-component>
 <wxs src="../../utils/util.wxs" module="util" />
 <view>
-    <view class="mark {{class!==''?'markBlok':''}}"></view>
+    <view class="mark {{class!=''?'markBlok':''}}"></view>
     <view class="date {{class}}">
     <swiper circular  style="height:571rpx"  bindchange="intervalChange"  current="{{index}}">
 			<swiper-item wx:for="{{nextMonth}}" >
@@ -22,11 +22,11 @@
      </view>
      <view class="choose_head" bindtap="eventAgent">
         <view data-event='time' class="{{class!=''?'Selected':''}}">{{selectId==''?'时间选择': year +'-'+ month +'-'+ util.split(selectId)}}</view> 
-        <view data-event='isEdit'>已察觉</view> 
-        <view data-event='noEdit'>未察觉</view> 
+        <view data-event='isEdit' class="{{isEdit?'Selected':''}}">已察觉</view> 
+        <view data-event='noEdit' class="{{noEdit?'Selected':''}}">未察觉</view> 
         <view data-event='delete' id="choose_head_to" >{{toDelete?'取消选择':'选择操作'}}</view> 
      </view>
-     <view class="choose_content" wx:for="{{historyList}}">
+     <view class="choose_content" wx:for="{{historyList}}" wx:key>
         <view class="choose_content_dateContent">
             <view class="choose_content_date" wx:if="{{!toDelete}}">
                {{util.getDay(util.number(item.createTime))}}

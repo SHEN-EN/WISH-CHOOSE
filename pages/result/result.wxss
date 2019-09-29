@@ -4,7 +4,7 @@
     width: 475rpx;
     height: 670rpx;
     position: absolute;
-    top: 179rpx;
+    top: 319rpx;
     left: 127rpx;
     border-radius: 10px;
 }

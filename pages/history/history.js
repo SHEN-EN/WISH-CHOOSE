@@ -27,6 +27,8 @@ Page({
       deleteList:[],
       prevWeek:'', //上个月的天数
       nextWeek:'', //下一个月的天数
+      isEdit:'',
+      noEdit:''
   },
 
   /**
@@ -67,16 +69,20 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+      this.loadingList()
   },
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function (e) {
-    this.setData({
-      pageNo:this.data.pageNo+5
-    })
-    this.loadingList()
+    if (this.data.toDelete) {
+      return;
+    }else{
+      this.setData({
+        pageNo:this.data.pageNo+5
+      })
+      this.loadingList()
+    }
   },
 
   /**
@@ -189,11 +195,19 @@ Page({
       },
       method: 'post', 
       success: function(res){
-        let arr=[...res.data.query];
-        arr.push(...that.data.historyList)
-        that.setData({
-          historyList:arr
-        })
+        if (res.data.query=='') {
+          wx.showToast({
+            title: '没有更多的数据了',
+            icon: 'none',
+            duration: 1000
+          })
+        } else {
+          let arr=[...res.data.query];
+          arr.push(...that.data.historyList)
+          that.setData({
+            historyList:arr
+          })
+        }
       }
     })
   },
@@ -202,7 +216,7 @@ Page({
     this.setData({
       year:date.getFullYear(),
       month:date.getMonth() + 1,
-      selectId:(date.getDate()+common.getLastWeek(date.getFullYear(),date.getMonth()+1)-1)+'-'+date.getDate()
+      selectId:this.data.selectId==''?(date.getDate()+common.getLastWeek(date.getFullYear(),date.getMonth()+1)-1)+'-'+date.getDate():this.data.selectId
     })
     this.updataDay(this.data.year,this.data.month);
       this.setData({
@@ -219,7 +233,8 @@ Page({
   },
   toshow:function(){  //选择日期完成
     this.setData({
-      class:''
+      class:'',
+      historyList:[]
     });
     this.loadingList('',+new Date(`${this.data.year}-${this.data.month}-${this.data.selectId.split('-')[1]}`),+new Date(`${this.data.year}-${this.data.month}-${Number(this.data.selectId.split('-')[1])+1}`)-1)
   },
@@ -251,20 +266,21 @@ Page({
   eventAgent(e){ //事件代理
     switch (e.target.dataset.event) {
       case 'time':
-          this.setData({
-            historyList:''
-          })
           this.toSelectTime();
         break;
       case 'isEdit':
         this.setData({
-          historyList:''
+          historyList:[],
+          isEdit:true,
+          noEdit:false,
         })
           this.loadingList(1) //edit :1 已察觉
         break;
       case 'noEdit':
           this.setData({
-            historyList:''
+            historyList:[],
+            noEdit:true,
+            isEdit:false
           })
           this.loadingList(0)          
         break;
