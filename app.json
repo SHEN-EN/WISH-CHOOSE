@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/SeekingResources/SeekingResources",
     "pages/home/home",
     "pages/history/history",
     "pages/result/result",
@@ -9,8 +8,8 @@
     "pages/Awarenessdiary/Awarenessdiary",
     "pages/cards/cards",
     "pages/extract/extract",
-    "pages/author/author"
-    
+    "pages/author/author",
+    "pages/SeekingResources/SeekingResources"
   ],
   "window": {
     "backgroundTextStyle": "light",

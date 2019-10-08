@@ -84,5 +84,18 @@
         <view class='SeekingResources-list-user-look-btn'>查看</view>
       </view>
     </view>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/bc1263d7c1ade82312c728a517133ef.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>张源</text>
+        <text>产后抑郁专业指导师</text>
+        <text>擅长：对处理暴力很有得到</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
   </view>
 </view>

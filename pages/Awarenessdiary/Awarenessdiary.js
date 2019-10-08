@@ -1,5 +1,3 @@
-
-  
 // pages/Awarenessdiary/Awarenessdiary.js
 Page({
   data: {
@@ -11,8 +9,8 @@ Page({
   onLoad: function(options) {
     // 页面创建时执行
     this.setData({
-      cardface:wx.getStorageSync('imgCar'),
-      cardback:wx.getStorageSync('imgTextCar')
+      cardface: wx.getStorageSync('imgCar'),
+      cardback: wx.getStorageSync('imgTextCar')
     })
   },
   onShow: function() {
@@ -42,86 +40,85 @@ Page({
   onResize: function() {
     // 页面尺寸变化时执行
   },
-  valueChange:function (e) {  //同步更新value
-      this.setData({
-        value:e.detail.value
-      })
-   },
-   toSaveContent:function() {
-        let isEdit='';
-        let params=arguments[0]
-        if (params && this.data.value) { // 未点击保存且没有填内容
-          isEdit=1
-        }else if (params) { //已保存但是填写了内容
-          isEdit=0
-        }else{ // 点击保存 
-          isEdit=1          
-        }
-        let StoryList=[];
-        StoryList.push({
-          imgTextCar:wx.getStorageSync('imgTextCar'),
-          imgCar:wx.getStorageSync('imgCar'),
-          storyValue:this.data.value
-        })
-        wx.request({
-          url: 'http://129.204.154.119:5555/api/saveStory',
-          data: {
-            openid:wx.getStorageSync('openid'),
-            storyInf:JSON.stringify(StoryList),
-            createTime:+new Date,
-            edit:isEdit
-          },
-          method: 'post', 
-          success: function(res){
-              if (res.data.code==200) {
-                if (params) {
-                  wx.showToast({
-                    title: '已保存请下次编辑！',
-                    icon: 'none',
-                    duration: 1000
-                  })
-                }else{
-                  wx.showToast({
-                    title: '保存成功',
-                    icon: 'success',
-                    duration: 1000
-                  })
-                }
-              setTimeout(()=>{
-                    wx.redirectTo({
-                      url: '../../pages/home/home',
-                    });
-              },1200)
-            }
+  valueChange: function(e) { //同步更新value
+    this.setData({
+      value: e.detail.value
+    })
+  },
+  toSaveContent: function() {
+    let isEdit = '';
+    let params = arguments[0]
+    if (params && this.data.value) { // 未点击保存且没有填内容
+      isEdit = 1
+    } else if (params) { //已保存但是填写了内容
+      isEdit = 0
+    } else { // 点击保存 
+      isEdit = 1
+    }
+    let StoryList = [];
+    StoryList.push({
+      imgTextCar: wx.getStorageSync('imgTextCar'),
+      imgCar: wx.getStorageSync('imgCar'),
+      storyValue: this.data.value
+    })
+    wx.request({
+      url: 'http://129.204.154.119:5555/api/saveStory',
+      data: {
+        openid: wx.getStorageSync('openid'),
+        storyInf: JSON.stringify(StoryList),
+        createTime: +new Date,
+        edit: isEdit
+      },
+      method: 'post',
+      success: function(res) {
+        if (res.data.code == 200) {
+          if (params) {
+            wx.showToast({
+              title: '已保存请下次编辑！',
+              icon: 'none',
+              duration: 1000
+            })
+          } else {
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 1000
+            })
           }
-        })
+          setTimeout(() => {
+            wx.redirectTo({
+              url: '../../pages/home/home',
+            });
+          }, 1200)
+        }
+      }
+    })
 
-    },
-    showLoading(e) {
-      let that=this //保存this
-      wx.showModal({
-        content: '是否保存改觉察日记', //提示的内容
-        cancelTex: '不保存', //取消按钮的文字
-        confirmText: '保存', //确认按钮的文字
-        success: function(res) {
-          if (res.confirm) {
-            if (!that.data.value) {
-              wx.showToast({
-                title: '请输入觉察内容',
-                icon: 'none',
-                duration: 1000
-              })
-            }else{
-              that.toSaveContent()
-            }  
-          }else if(res.cancel){
-              that.toSaveContent('flag')
+  },
+  showLoading(e) {
+    let that = this //保存this
+    wx.showModal({
+      content: '是否保存改觉察日记', //提示的内容
+      cancelTex: '不保存', //取消按钮的文字
+      confirmText: '保存', //确认按钮的文字
+      success: function(res) {
+        if (res.confirm) {
+          if (!that.data.value) {
+            wx.showToast({
+              title: '请输入觉察内容',
+              icon: 'none',
+              duration: 1000
+            })
+          } else {
+            that.toSaveContent()
           }
+        } else if (res.cancel) {
+          that.toSaveContent('flag')
         }
-      });
-      setTimeout(function() {
-        wx.hideLoading();
-      }, 2000);
-    },
+      }
+    });
+    setTimeout(function() {
+      wx.hideLoading();
+    }, 2000);
+  },
 });
-
