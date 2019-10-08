@@ -1,1 +1,100 @@
 /* pages/SeekingResources/SeekingResources.wxss */
+
+page {
+  background: #fff;
+}
+
+.Seeking {
+  display: flex;
+  text-align: left;
+  margin-top: 66rpx;
+  align-items: center;
+}
+
+.Seeking>image {
+  width: 18rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}
+
+.SeekingResources {
+  font-size: 34rpx;
+  font-weight: 500;
+  margin-left: 26rpx;
+}
+
+.Seeking-divLine {
+  background: #e5e5e5;
+  width: 100%;
+  height: 1rpx;
+  margin-top: 26rpx;
+}
+
+.SeekingResources-list {
+  width: 100%;
+}
+
+.SeekingResources-list-user {
+  width: 100%;
+  height: 175rpx;
+  padding: 30rpx 20rpx 0rpx 20rpx;
+}
+
+.SeekingResources-list-user-image {
+  height: 144rpx;
+  width: 144rpx;
+  float: left;
+}
+
+.SeekingResources-list-user-image>image {
+  width: 100%;
+  height: 100%;
+}
+
+.SeekingResources-list-user-name {
+  width: 400rpx;
+  height: 144rpx;
+  margin-left: 12rpx;
+  float: left;
+  padding: 28rpx 0rpx 18rpx 0rpx;
+}
+
+.SeekingResources-list-user-name>text {
+  display: block;
+}
+
+.SeekingResources-list-user-name>text:nth-child(1) {
+  color: #282828;
+  font-size: 28rpx;
+}
+
+.SeekingResources-list-user-name>text:nth-child(2) {
+  color: #989898;
+  font-size: 28rpx;
+}
+
+.SeekingResources-list-user-name>text:nth-child(3) {
+  color: #989898;
+  font-size: 22rpx;
+}
+
+.SeekingResources-list-user-look {
+  width: 100rpx;
+  height: 144rpx;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SeekingResources-list-user-look-btn {
+  width: 100rpx;
+  height: 100rpx;
+  color: #38618c;
+  border-radius: 50%;
+  border: 2rpx solid #38618c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22rpx;
+}

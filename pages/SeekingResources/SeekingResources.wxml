@@ -1,2 +1,88 @@
 <!--pages/SeekingResources/SeekingResources.wxml-->
-<text>123</text>
+<view>
+  <view class='Seeking'>
+    <image bindtap="showLoading" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/Awarenessdiary/back.png" mode="aspectFill"></image>
+    <text class='SeekingResources'>寻求咨询</text>
+  </view>
+  <view class="Seeking-divLine"></view>
+  <view class='SeekingResources-list'>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/51ec3eb848bc33c19161d37a6393c6f.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>马启燊</text>
+        <text>高级婚姻关系心理指导师</text>
+        <text>擅长：对于处理两性、同性关系炉火纯青</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/42a746b2b177504ef849e008d360489.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>熊浩</text>
+        <text>高级暴力心理疗法</text>
+        <text>擅长：对处理暴力很有得到</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/bc1263d7c1ade82312c728a517133ef.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>张源</text>
+        <text>产后抑郁专业指导师</text>
+        <text>擅长：对处理暴力很有得到</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/51ec3eb848bc33c19161d37a6393c6f.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>马启燊</text>
+        <text>高级婚姻关系心理指导师</text>
+        <text>擅长：对于处理两性、同性关系炉火纯青</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/42a746b2b177504ef849e008d360489.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>熊浩</text>
+        <text>高级暴力心理疗法</text>
+        <text>擅长：对处理暴力很有得到</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
+    <view class='SeekingResources-list-user'>
+      <view class='SeekingResources-list-user-image'>
+        <image src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/SeekingResources/bc1263d7c1ade82312c728a517133ef.jpg"></image>
+      </view>
+      <view class='SeekingResources-list-user-name'>
+        <text>张源</text>
+        <text>产后抑郁专业指导师</text>
+        <text>擅长：对处理暴力很有得到</text>
+      </view>
+      <view class='SeekingResources-list-user-look'>
+        <view class='SeekingResources-list-user-look-btn'>查看</view>
+      </view>
+    </view>
+  </view>
+</view>
