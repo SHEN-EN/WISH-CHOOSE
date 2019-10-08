@@ -12,8 +12,10 @@ Page({
     // 页面创建时执行
     this.setData({
       cardface:wx.getStorageSync('imgCar'),
-      cardback:wx.getStorageSync('imgTextCar')
+      cardback:wx.getStorageSync('imgTextCar'),
+      storyId:options.id
     })
+    console.log(options.id)
   },
   onShow: function() {
     // 页面出现在前台时执行
