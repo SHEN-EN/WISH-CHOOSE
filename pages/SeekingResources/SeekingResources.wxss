@@ -1,6 +1,3 @@
-<<<<<<< .merge_file_a16944
-/* pages/SeekingResources/SeekingResources.wxss */
-=======
 /* pages/SeekingResources/SeekingResources.wxss */
 
 page {
@@ -101,4 +98,3 @@ page {
   align-items: center;
   font-size: 22rpx;
 }
->>>>>>> .merge_file_a20052

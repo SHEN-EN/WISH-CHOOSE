@@ -1,7 +1,4 @@
 Page({
-<<<<<<< .merge_file_a14124
-  
-=======
   data: {
   },
   showLoading: function() {
@@ -9,5 +6,4 @@ Page({
       url: '../../pages/home/home',
     })
   },
->>>>>>> .merge_file_a06360
 })

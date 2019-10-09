@@ -1,7 +1,4 @@
 <!--pages/SeekingResources/SeekingResources.wxml-->
-<<<<<<< .merge_file_a16412
-<text>123</text>
-=======
 <view>
   <view class='Seeking'>
     <image bindtap="showLoading" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/Awarenessdiary/back.png" mode="aspectFill"></image>
@@ -102,4 +99,3 @@
     </view>
   </view>
 </view>
->>>>>>> .merge_file_a18936
