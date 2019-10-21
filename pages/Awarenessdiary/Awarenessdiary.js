@@ -9,14 +9,9 @@ Page({
   onLoad: function(options) {
     // 页面创建时执行
     this.setData({
-<<<<<<< HEAD
       cardface:wx.getStorageSync('imgCar'),
       cardback:wx.getStorageSync('imgTextCar'),
       storyId:options.id
-=======
-      cardface: wx.getStorageSync('imgCar'),
-      cardback: wx.getStorageSync('imgTextCar')
->>>>>>> d2a2991c4618b4a1b4c5115c8504f7b3dce9b001
     })
     console.log(options.id)
   },
