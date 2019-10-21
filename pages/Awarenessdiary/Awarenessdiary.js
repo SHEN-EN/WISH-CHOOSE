@@ -11,7 +11,9 @@ Page({
     this.setData({
       cardface:wx.getStorageSync('imgCar'),
       cardback:wx.getStorageSync('imgTextCar'),
-      storyId:options.id
+      storyId:options.id,
+      cardface: wx.getStorageSync('imgCar'),
+      cardback: wx.getStorageSync('imgTextCar')
     })
     console.log(options.id)
   },
