@@ -11,6 +11,7 @@ Page({
     headImg:'',
     value:[], //发送者的消息列表
     inputValue:'',//输入框的值
+    commitValue:[],
   },
   InputFocus(e) {
     this.setData({
@@ -35,9 +36,10 @@ Page({
         value:this.data.value,
       })
       this.sendSocketMessage(JSON.stringify({
-        uuid:'ce2d011b-3ea0-4d91-8ae1-5883b778e5e6',//common.wxuuid(),
+        uuid:wx.getStorageSync('uuid'),
         message:input,
-        type:2
+        type:2,
+        img:wx.getStorageSync('userInfo').avatarUrl,
       }))
   },
   sendSocketMessage:function(msg){
@@ -46,6 +48,10 @@ Page({
       })
   },
   onLoad:function(){
+    wx.setStorage({
+      key: 'uuid',
+      data: common.wxuuid(),
+    })
     var userInfo = wx.getStorageSync('userInfo');
     this.setData({
       headerImg: userInfo.avatarUrl,
@@ -60,8 +66,8 @@ Page({
         title: '链接成功',
       })
       this.sendSocketMessage(JSON.stringify({
-        uuid:'ce2d011b-3ea0-4d91-8ae1-5883b778e5e6',//common.wxuuid(),
-        message:'aa',
+        uuid:wx.getStorageSync('uuid'),
+        message:'',
         type:1
       }))
     })
@@ -78,6 +84,12 @@ Page({
     })  
     wx.onSocketMessage((res)=>{
       console.log("收到消息:"+res.data)
+      if (JSON.parse(res.data).uuid!=wx.getStorageSync('uuid')) {
+          this.data.commitValue.push(JSON.parse(res.data))
+          this.setData({
+            commitValue:this.data.commitValue
+          });
+      }
     })
   }
 })
