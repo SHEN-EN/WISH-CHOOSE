@@ -26,7 +26,8 @@ Page({
       inputValue:e.detail.value
     })
   },
-  send:function () { 
+  send:function () {
+      this.data.value=''
       this.data.value.push(this.data.inputValue)
       this.setData({
         value:this.data.value,
