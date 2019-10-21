@@ -1,3 +1,4 @@
+var common = require('../../common/common.js')
 Page({
   data: {
     InputBottom: 0,
@@ -27,12 +28,17 @@ Page({
     })
   },
   send:function () {
-      this.data.value=''
+      let input='';
+      input=this.data.inputValue
       this.data.value.push(this.data.inputValue)
       this.setData({
         value:this.data.value,
       })
-      this.sendSocketMessage(this.data.value)
+      this.sendSocketMessage(JSON.stringify({
+        uuid:'ce2d011b-3ea0-4d91-8ae1-5883b778e5e6',//common.wxuuid(),
+        message:input,
+        type:2
+      }))
   },
   sendSocketMessage:function(msg){
       wx.sendSocketMessage({
@@ -53,6 +59,11 @@ Page({
       wx.showToast({
         title: '链接成功',
       })
+      this.sendSocketMessage(JSON.stringify({
+        uuid:'ce2d011b-3ea0-4d91-8ae1-5883b778e5e6',//common.wxuuid(),
+        message:'aa',
+        type:1
+      }))
     })
     wx.onSocketError(()=>{
       wx.showToast({
