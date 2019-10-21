@@ -159,6 +159,5 @@
    
   .commonHead_right_text {
     width: 280rpx;
-    margin-left: 20rpx;
-    font-size: 40rpx;    
+    font-size: 35rpx;    
   }

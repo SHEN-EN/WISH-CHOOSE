@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "foot": "../../component/footer/footer",
-    "my-component": "/custom-component/custom-component"
+    "my-component": "../../component/custom-component/custom-component"
   }
 }

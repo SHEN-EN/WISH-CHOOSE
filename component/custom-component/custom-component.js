@@ -59,7 +59,6 @@ Component({
    
     methods: {
       commonHead_left_back: function() {
-        console.log("back")
         wx.reLaunch({
           url: '/pages/my/my'
         });
