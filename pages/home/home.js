@@ -56,7 +56,7 @@ Page({
     }],
 	home: true,
 	title:{
-		"bg_color": "#ffea2e",
+		"bg_color": "#ffee58",
     "color": "#333",
 		"name": "Wise Choose"
 	}

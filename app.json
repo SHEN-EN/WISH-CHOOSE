@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/chat/chat",
     "pages/home/home",
+    "pages/chat/chat",
     "pages/history/history",
     "pages/result/result",
     "pages/pattern/pattern",
@@ -14,9 +14,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffee58",
+    "navigationBarBackgroundColor":"#ffee58",
     "navigationBarTitleText": "睿择Wise Choose",
-    "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
   "sitemapLocation": "sitemap.json"

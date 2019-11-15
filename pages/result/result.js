@@ -79,7 +79,7 @@ Page({
   },
   selectAdvisory: function() {
     wx.redirectTo({
-      url: '../../pages/SeekingResources/SeekingResources',
+      url: '../../pages/chat/chat',
     })
   }
 })

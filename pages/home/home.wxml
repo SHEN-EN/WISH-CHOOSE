@@ -38,6 +38,24 @@
         <view class="home_hotProp_icon"></view>
         <text class="home_hotProp_name">热门道具</text>
       </view>
+      <view class="home_hotProp_content">
+        <view class="home_hotProp_content_list">
+          <image class="" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/home/hotProp-1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          <view>OH卡-心灵图卡</view>
+        </view>
+          <view class="home_hotProp_content_list">
+          <image class="" src="../image/a.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          <view>人格测试卡</view>
+        </view>
+          <view class="home_hotProp_content_list">
+          <image class="" src="../image/b.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          <view>兴趣岛</view>
+        </view>
+          <view class="home_hotProp_content_list">
+          <image class="" src="https://shen-1259805780.cos.ap-chengdu.myqcloud.com/page_image/home/hotProp-1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          <view>OH卡-心灵图卡</view>
+        </view>
+      </view>
     </view>
   </view>
   <foot id="foot" state="{{home}}"></foot>

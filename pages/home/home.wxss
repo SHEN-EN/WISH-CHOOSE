@@ -115,3 +115,19 @@ OH卡 - 系列
   font-size: 18px;
   font-weight: bold;
 }
+.home_series .home_hotProp .home_hotProp_content image{
+  width: 200rpx;
+  height: 98rpx;
+}
+.home_series .home_hotProp .home_hotProp_content{
+  padding-bottom: 120rpx;
+  font-size: 22rpx;
+  text-align: center;
+  overflow: hidden;
+
+}
+.home_series .home_hotProp .home_hotProp_content_list{
+  width: 23%;
+  float: left;
+  margin-left: 2%;
+}

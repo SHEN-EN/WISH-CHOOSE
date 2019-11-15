@@ -56,7 +56,7 @@ Page({
     this.setData({
       headerImg: userInfo.avatarUrl,
     })
-    var url = "ws://10.3.13.32:8003"
+    var url = "ws://129.204.154.119:8003"
     wx.connectSocket({
       url:url
     })
@@ -83,7 +83,6 @@ Page({
       })
     })  
     wx.onSocketMessage((res)=>{
-      console.log("收到消息:"+res.data)
       if (JSON.parse(res.data).uuid!=wx.getStorageSync('uuid')) {
           this.data.commitValue.push(JSON.parse(res.data))
           this.setData({
